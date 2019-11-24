@@ -1,0 +1,599 @@
+
+ADS NASTRAN VERSION 12.0.0.121  04:34  11/22/19                                 
+MODEL DATABASE IDENTIFICATION NUMBER: 01V5VV                                    
+
+NUMBER OF PROCESSOR THREADS REQUESTED =    2                                    
+NUMBER OF PROCESSOR THREADS AVAILABLE =    8                                    
+NUMBER OF PROCESSOR THREADS USED      =    2                                    
+                                                                                
+                                                                                
+LICENSE STATUS                                                                  
+                                                                                
+AVAILABLE ANALYSIS SOLUTIONS = LINEAR STATIC                                    
+                               PRESTRESS STATIC                        
+                               NONLINEAR STATIC                        
+                               MODAL                                   
+                               MODAL COMPLEX EIGENVALUE                
+                               LINEAR PRESTRESS MODAL                  
+                               NONLINEAR PRESTRESS MODAL               
+                               LINEAR PRESTRESS COMPLEX EIGENVALUE     
+                               NONLINEAR PRESTRESS COMPLEX EIGENVALUE  
+                               LINEAR BUCKLING                         
+                               NONLINEAR BUCKLING                      
+                               MODAL TRANSIENT RESPONSE                
+                               DIRECT TRANSIENT RESPONSE               
+                               NONLINEAR TRANSIENT RESPONSE            
+                               LINEAR PRESTRESS TRANSIENT RESPONSE     
+                               NONLINEAR PRESTRESS TRANSIENT RESPONSE  
+                               MODAL FREQUENCY RESPONSE                
+                               DIRECT FREQUENCY RESPONSE               
+                               LINEAR PRESTRESS FREQUENCY RESPONSE     
+                               NONLINEAR PRESTRESS FREQUENCY RESPONSE  
+                               LINEAR STEADY STATE HEAT TRANSFER       
+                               NONLINEAR STEADY STATE HEAT TRANSFER    
+                               NONLINEAR TRANSIENT HEAT TRANSFER       
+                               MATRIX REDUCTION                        
+                                                                                
+AVAILABLE RESULTS TRANSLATORS = NORAN BINARY                                    
+                                NORAN ASCII                             
+                                PATRAN BINARY                           
+                                PATRAN ASCII                            
+                                FEMAP BINARY                            
+                                FEMAP ASCII                             
+                                NASTRAN BINARY                          
+                                                                                
+AVAILABLE ANALYSIS FEATURES = MULTIAXIAL FATIGUE                                
+                              DYNAMIC FATIGUE                         
+                              VIBRATION FATIGUE                       
+                              PROGRESSIVE PLY FAILURE                 
+                              AMLS INTERFACE                          
+                              BOUNDARY ACOUSTIC ANALYSIS              
+                              TOPOLOGY OPTIMIZATION                   
+                              PROGRESSIVE FAILURE ANALYSIS            
+                              ADVANCED MATERIAL EXCHANGE              
+                                                                                
+MAXIMUM MODEL SIZE = NO LIMITS                                                  
+                                                                                
+
+VIRTUAL MEMORY =  1177530368 WORDS      8983.8 MEGABYTES                        
+REAL MEMORY    =  1259130368 WORDS      9606.4 MEGABYTES                        
+
+DRIVE c: DISK SPACE =   114877177856 WORDS    876443.3 MEGABYTES                
+
+GENERATING DATABASE:  cantilever_beam.NDB                                       
+
+WARNING T2104: UNRECOGNIZED CASE CONTROL COMMAND                                
+DIAG 8                                                                          
+
+14 CASE CONTROL COMMANDS WERE RECOGNIZED OF A TOTAL OF 15 READ IN               
+
+17 BULK DATA ENTRIES WERE RECOGNIZED OF A TOTAL OF 17 READ IN                   
+                                                                                
+MODEL DATABASE SIZE                                                             
+                                                                                
+SUBCASES                     =        2                                         
+GRID POINTS                  =        7                                         
+ELEMENTS                     =        5                                         
+ELEMENT PROPERTIES           =        1                                         
+MATERIAL PROPERTIES          =        1                                         
+SINGLE POINT CONSTRAINTS     =        9                                         
+GRID POINT FORCES            =        1                                         
+GRAVITY LOADS                =        1                                         
+SETS                         =        1                                         
+
+MODULE SEQUENCE FOR SOLUTION: LINEAR STATIC                                     
+
+MODEL SIZE    =          42 DEGREES OF FREEDOM                                  
+MATRIX SIZE   =      100312 WORDS        0.8 MEGABYTES                          
+SEMIBANDWIDTH =          11 WORDS                                               
+
+AVAILABLE VIRTUAL MEMORY  =  1172099584 WORDS      8942.4 MEGABYTES             
+AVAILABLE PHYSICAL MEMORY =  1255731712 WORDS      9580.5 MEGABYTES             
+
+DRIVE c: DISK SPACE =   114876750848 WORDS    876440.1 MEGABYTES                
+
+GLOBAL STIFFNESS MATRIX ASSEMBLY STATISTICS                                     
+
+SPARSE MATRIX SIZE =     100312 WORDS        0.8 MEGABYTES                      
+MEMORY ALLOCATED   =     150468 WORDS        1.1 MEGABYTES                      
+
+MAXIMUM GLOBAL STIFFNESS MATRIX TERM ZEROED =  0.0000E+00                       
+MINIMUM GLOBAL STIFFNESS MATRIX TERM ZEROED =  0.0000E+00                       
+REDUCTION IN GLOBAL STIFFNESS MATRIX SIZE   =  0.24 PERCENT                     
+
+ASSEMBLY TIME FOR 5 ELEMENTS = 0.0 SECONDS                                      
+
+DIAGONAL MASS MATRIX FORMULATION USED                                           
+
+SOLUTION SEQUENCE FOR SUBCASE 1                                                 
+
+MAXIMUM STIFFNESS MATRIX DIAGONAL =  1.0001E+06  AT GRID 5 COMPONENT 3          
+MINIMUM STIFFNESS MATRIX DIAGONAL =  0.0000E+00  AT GRID 6 COMPONENT 6          
+
+WARNING E5010: ONE OR MORE NON-ZERO DEGREES OF FREEDOM WERE AUTO-CONSTRAINED    
+
+AVAILABLE VIRTUAL MEMORY  =  1171618304 WORDS      8938.7 MEGABYTES             
+AVAILABLE PHYSICAL MEMORY =  1255655424 WORDS      9579.9 MEGABYTES             
+
+DRIVE c: DISK SPACE =   114876749824 WORDS    876440.1 MEGABYTES                
+
+GLOBAL STIFFNESS MATRIX FACTORIZATION STATISTICS                                
+
+NUMBER OF NEGATIVE TERMS ON FACTOR DIAGONAL = 0                                 
+MAXIMUM MATRIX FACTOR DIAGONAL RATIO = 1.600E+01 AT GRID 3 COMPONENT 5          
+
+REORDERING METHOD REQUESTED = AUTO                                              
+REORDERING METHOD USED      = VRM7                                              
+
+FACTORED SPARSE MATRIX SIZE =         100284 WORDS        0.8 MEGABYTES         
+ADDITIONAL MEMORY ALLOCATED =         250432 WORDS        1.9 MEGABYTES         
+
+FACTORIZATION TIME FOR 100284 WORDS = 0.0 SECONDS                               
+
+MAXIMUM DISPLACEMENT MAGNITUDE =  9.999224E-02  AT GRID 6                       
+MAXIMUM ROTATION MAGNITUDE     =  2.999767E-02  AT GRID 6                       
+
+EPSILON       =  2.888555E-14                                                   
+STRAIN ENERGY =  4.999612E+00                                                   
+
+SOLUTION TIME FOR 42 DEGREES OF FREEDOM = 0.0 SECONDS                           
+
+SOLUTION SEQUENCE FOR SUBCASE 2                                                 
+
+MAXIMUM DISPLACEMENT MAGNITUDE =  1.334168E-01  AT GRID 6                       
+MAXIMUM ROTATION MAGNITUDE     =  3.581189E-02  AT GRID 6                       
+
+EPSILON       =  3.341035E-15                                                   
+STRAIN ENERGY =  9.453006E+00                                                   
+
+SOLUTION TIME FOR 42 DEGREES OF FREEDOM = 0.0 SECONDS                           
+
+CALCULATING RESULTS FOR SUBCASE 1                                               
+
+CALCULATING RESULTS FOR SUBCASE 2                                               
+
+ANALYSIS DIRECTIVE DEFINITION                                                   
+                                                                                
+BUFFEREDDECKREAD = ON                                                           
+BULKDATAOUT      = OFF                                                          
+BULKDATASORT     = ON                                                           
+DATABASE         = c:\users\fangd\desktop\cantilever_beam\cantilever_beam.NDB   
+DECOMPAUTOSIZE   = 50000                                                        
+DECOMPMETHOD     = VSS                                                          
+DISKSTATUS       = ON                                                           
+DYNRSLTMETHOD    = DISP                                                         
+ELAPSEDTIME      = OFF                                                          
+EXTRACTAUTOSIZE  = 10000                                                        
+EXTRACTMETHOD    = SUBSPACE                                                     
+FEMAPRSLTVECTID  = ON                                                           
+FILEBUFFERSIZE1  = 100                                                          
+FILEBUFFERSIZE2  = 100                                                          
+FILEBUFFERSIZE3  = 100                                                          
+FILEBUFFERSIZE4  = 100                                                          
+FILESIGNATURE    = V5VV                                                         
+FILESPEC1        = C:\ProgramData\Autodesk\Nastran 2018\Temp\NDBV5VV.TMP\       
+FILESPEC2        = C:\ProgramData\Autodesk\Nastran 2018\Temp\NDBV5VV.TMP\       
+FILESPEC3        = C:\ProgramData\Autodesk\Nastran 2018\Temp\NDBV5VV.TMP\       
+FILESPEC4        = C:\ProgramData\Autodesk\Nastran 2018\Temp\NDBV5VV.TMP\       
+GPWEIGHTMETHOD   = VECTOR                                                       
+INMEMORYIO       = ON                                                           
+LEFTMARGIN       = 1                                                            
+LICENSEMANAGER   = HANDSHAKE                                                    
+LINE             = 75                                                           
+MAXRAM           = 0                                                            
+MEMORYSTATUS     = ON                                                           
+MINRAM           = 0                                                            
+MODLDATAFORMAT   = 3                                                            
+MODLDATAOUT      = ON                                                           
+MODLINITOUT      = ON                                                           
+MODLSTATUS       = DISPLAY                                                      
+NDISKS           = 1                                                            
+NFILEBUFFER1     = 1                                                            
+NFILEBUFFER2     = 1                                                            
+NFILEBUFFER3     = 1                                                            
+NFILEBUFFER4     = 1                                                            
+NPROCESSORS      = 2                                                            
+OPTIMIZESETTINGS = NONE                                                         
+OUTCONTSYMBOL    = OFF                                                          
+OUTDISPGEOMMODE  = 1                                                            
+OUTDISPSETID     = 100                                                          
+OUTLOADSETID     = 100                                                          
+OUTPAGEFORMAT    = OFF                                                          
+OUTGRIDOFFSET    = 100000                                                       
+OUTSPCSETID      = 100                                                          
+OUTSTRNSETID     = 100                                                          
+OUTTEMPSETID     = 100                                                          
+OUTZEROVECT      = OFF                                                          
+PCHFILEDBLEPRCS  = OFF                                                          
+PCHFILETYPE      = NASTRAN                                                      
+PURGE            = ON                                                           
+RAM              = 13072                                                        
+RESERVEDRAM      = 0                                                            
+RESTART          = OFF                                                          
+RSLTFILEDBLEPRCS = OFF                                                          
+RSLTFILEFORMAT   = PLATFORM                                                     
+RSLTFILEPURGE    = ON                                                           
+RSLTFILETYPE     = FEMAP BINARY                                                 
+RSLTLABEL        = 1                                                            
+RSPECDISPMETHOD  = NODAL                                                        
+RSPECVECTMETHOD  = OFF                                                          
+SECONDS          = ON                                                           
+SYSTEMSTATUS     = OFF                                                          
+TOPTENGINE       = AUTO                                                         
+TRSLDDAMDATA     = OFF                                                          
+TRSLDFGMDATA     = OFF                                                          
+TRSLDISPDATA     = OFF                                                          
+TRSLDMIDATA      = OFF                                                          
+TRSLLOADDATA     = OFF                                                          
+TRSLMODLDATA     = OFF                                                          
+TRSLPRESDATA     = OFF                                                          
+TRSLRBSEDATA     = OFF                                                          
+TRSLSPCDATA      = OFF                                                          
+TRSLSTRNDATA     = OFF                                                          
+TRSLTEMPDATA     = OFF                                                          
+TRSLTOQEDATA     = OFF                                                          
+SHELLEGRID       = OFF                                                          
+SOLIDEGRID       = OFF                                                          
+XYPLOTCSVOUT     = OFF                                                          
+
+ANALYSIS PARAMETERS DEFINITION                                                  
+                                                                                
+ACBPRESSET       = 0                                                            
+ACBREFPRES       = 0.000000E+00                                                 
+ACBVC            = 0.000000E+00                                                 
+ADAPTLNCONTACT   = AUTO                                                         
+ADAPTTIMESTEP    = OFF                                                          
+ADDNLTOQUADLOAD  = OFF                                                          
+ADDPRESTRESS     = ON                                                           
+ADDPSDAFREQ      = OFF                                                          
+ALIGNEDGENODE    = OFF                                                          
+ALPHA            = 0.000000E+00                                                 
+ALTFAILINDEXFORM = OFF                                                          
+AUTOBPD          = OFF                                                          
+AUTOCORDROTATE   = ON                                                           
+AUTOFIXELEMGEOM  = ON                                                           
+AUTOFIXRIGIDELEM = ON                                                           
+AUTOFIXRIGIDSPC  = OFF                                                          
+AUTOSPC          = ON                                                           
+BARDKMETHOD      = BOTH                                                         
+BAREQVLOAD       = ON                                                           
+BETA             = 0.000000E+00                                                 
+BISECT           = ON                                                           
+BOLTPRELOADTOL   = 0.000000E+00                                                 
+BPDEFDIAG        = 0.000000E+00                                                 
+CB1              = 1.000000E+00                                                 
+CB2              = 1.000000E+00                                                 
+CK1              = 1.000000E+00                                                 
+CK2              = 1.000000E+00                                                 
+CLOSE            = 1.000000E+00                                                 
+CM1              = 1.000000E+00                                                 
+CM2              = 1.000000E+00                                                 
+COMPE1RSF        = DISABLE                                                      
+COMPE2RSF        = DISABLE                                                      
+COMPE3RSF        = DISABLE                                                      
+COMPG12RSF       = DISABLE                                                      
+COMPG23RSF       = DISABLE                                                      
+COMPG31RSF       = DISABLE                                                      
+COMPILSMETHOD    = COMPONENT                                                    
+COMPK1           = AUTO                                                         
+COMPK2           = AUTO                                                         
+COMPRSLTOUT      = OFF                                                          
+CONTACTGEN       = DISABLE                                                      
+CONTACTTOL       = AUTO                                                         
+CONTACTSTAB      = OFF                                                          
+CONVMATRIX       = OFF                                                          
+COUPMASS         = OFF                                                          
+CP1              = 1.000000E+00                                                 
+CP2              = 1.000000E+00                                                 
+CYSYMGEN         = 0                                                            
+CYSYMTOL         = 1.000000E-10                                                 
+DATABASEACCEL    = ON                                                           
+DDAMPHASE        = 0                                                            
+DELTASTRAINEGOUT = OFF                                                          
+DFREQ            = 1.000000E-05                                                 
+DIRSTRESSTYPE    = 0                                                            
+DISPGEOMSFACT    = 1.000000E+00                                                 
+DMILABEL         =                                                              
+DMIPDIAG         = OFF                                                          
+DYNRESPEIGVOUT   = OFF                                                          
+DYNSOLACCEL      = ON                                                           
+DYNSOLDIRECTINT  = ON                                                           
+DYNSOLRELGRID    = 0                                                            
+EDGENODETOL      = AUTO                                                         
+EIGENFLEXFREQ    = 1.000000E-01                                                 
+EIGENSHIFTSFACT  = 1.000000E+04                                                 
+EIGENSOLACCEL    = ON                                                           
+ELEMGEOMCHECKS   = OFF                                                          
+ELEMGEOMFATAL    = OFF                                                          
+ELEMGEOMOUT      = OFF                                                          
+ELEMRSLTCORD     = MATERIAL                                                     
+ELEMRSLTMAXTYPE  = MAXCORNER                                                    
+EMODES           = 30                                                           
+ENHCBARRSLT      = OFF                                                          
+ENHCCONTACTRSLT  = OFF                                                          
+ENHCQUADRSLT     = OFF                                                          
+EPSILONFLOAT     = 1.000000E-15                                                 
+EQVSTRESSTYPE    = 0                                                            
+FACTDIAG         = 1.000000E-10                                                 
+FACTRATIOTOL     = 1.000000E+05                                                 
+FIXNLTOQUAD      = ON                                                           
+FLOATINZERO      = 1.000000E-15                                                 
+FLOATOUTZERO     = 1.000000E-15                                                 
+FREQRESPRSLTINCR = 10                                                           
+FREQRESPRSLTOUT  = ON                                                           
+G                = 0.000000E+00                                                 
+GPSTRESS         = OFF                                                          
+GPWEIGHT         = OFF                                                          
+GRDPNT           = -1                                                           
+GRIDCOLTOL       = 0.000000E+00                                                 
+GRIDTEMPASGN     = OFF                                                          
+GRIDTEMPAVE      = OFF                                                          
+HEXARTOL         = 1.000000E+02                                                 
+HEXENODE         = OFF                                                          
+HEXFACEMAXIATOL  = 1.650000E+02                                                 
+HEXFACEMAXIATOL  = 1.650000E+02                                                 
+HEXFACEMINIATOL  = 2.500000E+01                                                 
+HEXFACESKEWTOL   = 6.500000E+01                                                 
+HEXFACETAPERTOL  = 7.500000E-01                                                 
+HEXFACEWARPTOL   = 4.500000E+01                                                 
+HEXINODE         = OFF                                                          
+HEXMAXEPADTOL    = 3.000000E+01                                                 
+HEXMINEPLRTOL    = 5.000000E-01                                                 
+HEXREDORD        = ON                                                           
+HFREQ            = 1.000000E+30                                                 
+HPNLMATREDORD    = AUTO                                                         
+HPNLMATSFACT     = AUTO                                                         
+INERTIALRELIEF   = OFF                                                          
+INITSLINEKSFACT  = 1.000000E-02                                                 
+INITSTRAINSFACT  = 1.000000E+00                                                 
+J4ROT            = AUTO                                                         
+KDAMP            = 1                                                            
+K6ROT            = 1.000000E+02                                                 
+KRIGIDELEM       = 7.938041E+12                                                 
+LANCZOSVECT      = OFF                                                          
+LANGLE           = GIMBAL                                                       
+LARC02TSAITOL    = 2.000000E+00                                                 
+LFREQ            = 0.000000E+00                                                 
+LGDISP           = 0                                                            
+LINEARCONTACT    = OFF                                                          
+LMODES           = 0                                                            
+LNCONTACTITERTOL = 1.000000E-02                                                 
+M6ROT            = 0.000000E+00                                                 
+MAXADJEDGE       = 100                                                          
+MAXBISECTRESTART = OFF                                                          
+MAXEIGENRESTART  = 5                                                            
+MAXELEMGEOMMSG   = 10000                                                        
+MAXIMPACTSTEP    = 0                                                            
+MAXINCREFSTRAINP = AUTO                                                         
+MAXLNCONTACTITER = -1                                                           
+MAXSPARSEITER    = AUTO                                                         
+MAXSRITER        = 100                                                          
+MAXTOPTITER      = 200                                                          
+MECHSTRAIN       = OFF                                                          
+MINSPARSEITER    = 50                                                           
+MODALDATABASE    = DELETE                                                       
+MODEFSPCSTORE    = ON                                                           
+MODEPFACTOR      = ON                                                           
+MODEVAROUT       = OFF                                                          
+NBEAMINTNODE     = 2                                                            
+NCBMODE          = 1                                                            
+NCONTACTGEOMITER = 1                                                            
+NDAMP            = 1.000000E-02                                                 
+NITERCUPDATE     = AUTO                                                         
+NITERKSUPDATE    = 3                                                            
+NITERMUPDATE     = 3                                                            
+NITERPFUPDATE    = 1                                                            
+NITERSUPDATE     = 8                                                            
+NLAYERS          = 1                                                            
+NLCOMPPLYFAIL    = OFF                                                          
+NLINDATABASE     = DELETE                                                       
+NLINDATALOADSF   = AUTO                                                         
+NLINSOLACCEL     = 4                                                            
+NLINSOLTOL       = 2                                                            
+NLKDIAGAFACT     = 0.000000E+00                                                 
+NLKDIAGCOMP      = 123456                                                       
+NLKDIAGMINAFACT  = 0.000000E+00                                                 
+NLKDIAGSET       = 0                                                            
+NLLSSTRAINTYPE   = LOG                                                          
+NLLSSTRESSTYPE   = CAUCHY                                                       
+NLMATSFACT       = AUTO                                                         
+NLMATTABLGEN     = 0.000000E+00                                                 
+NLNPDKRESET      = OFF                                                          
+NLSUBCREINIT     = OFF                                                          
+NLTOL            = 2                                                            
+NLTOQUAD         = ON                                                           
+NLTRUESTRESS     = OFF                                                          
+NOCOMPS          = ON                                                           
+NRBCHECKMODES    = 0                                                            
+NSUBINCRBISECT   = 200                                                          
+NTOPTSTRESSDIV   = 10                                                           
+OPTION           = ABS                                                          
+OUTSETTOL        = 1.000000E-05                                                 
+PARTGEOMOUT      = ON                                                           
+PARTMASSOUT      = OFF                                                          
+PCGLSSDMI        = OFF                                                          
+PENTARTOL        = 1.000000E+02                                                 
+PENTEGRID        = OFF                                                          
+PENTFACEMAXIATOL = 1.650000E+02                                                 
+PENTFACEMAXIATOL = 1.650000E+02                                                 
+PENTFACEMINIATOL = 2.500000E+01                                                 
+PENTFACESKEWTOL  = 6.500000E+01                                                 
+PENTFACETAPERTOL = 7.500000E-01                                                 
+PENTFACEWARPTOL  = 4.500000E+01                                                 
+PENTMAXEPADTOL   = 3.000000E+01                                                 
+PENTMINEPLRTOL   = 5.000000E-01                                                 
+PENTREDORD       = ON                                                           
+PRGPST           = ON                                                           
+PYRARTOL         = 1.000000E+02                                                 
+PYREGRID         = OFF                                                          
+PYRFACEMAXIATOL  = 1.700000E+02                                                 
+PYRFACEMAXIATOL  = 1.700000E+02                                                 
+PYRFACEMINIATOL  = 5.000000E+00                                                 
+PYRFACESKEWTOL   = 8.000000E+01                                                 
+PYRFACETAPERTOL  = 7.500000E-01                                                 
+PYRFACEWARPTOL   = 4.500000E+01                                                 
+PYRMAXEPADTOL    = 3.000000E+01                                                 
+PYRMINEPLRTOL    = 5.000000E-01                                                 
+PYRREDORD        = ON                                                           
+QUADBNDREDORD    = ON                                                           
+QUADEQVLOAD      = OFF                                                          
+QUADINODE        = OFF                                                          
+QUADMAXEPADTOL   = 3.000000E+01                                                 
+QUADMAXIATOL     = 1.650000E+02                                                 
+QUADMEMREDORD    = ON                                                           
+QUADMINEPLRTOL   = 5.000000E-01                                                 
+QUADMINIATOL     = 2.500000E+01                                                 
+QUADRNODE        = OFF                                                          
+QUADSECT         = OFF                                                          
+QUADSKEWTOL      = 6.500000E+01                                                 
+QUADTAPERTOL     = 7.500000E-01                                                 
+QUADWARPLIMIT    = 4.500000E+01                                                 
+QUADWARPTOL      = 4.500000E+01                                                 
+RADMATRIX        = ON                                                           
+RANDRESPINVLEVEL = 1                                                            
+RANDRESPRSLTOUT  = ON                                                           
+RBCHECKLEVEL     = 0                                                            
+RBCHECKMODES     = 0                                                            
+RESEQGRID        = OFF                                                          
+RESEQGRIDMETHOD  = AUTO                                                         
+RESEQSTARTGRID   = 0                                                            
+RESVEC           = OFF                                                          
+RESVPGF          = 1.000000E-06                                                 
+RIGIDBODYMODE    = AUTO                                                         
+RIGIDELEM2ELAS   = OFF                                                          
+RIGIDELEMCORD    = AUTO                                                         
+RIGIDELEMTYPE    = RBE                                                          
+ROTINERTIA       = ON                                                           
+RSPECTRA         = OFF                                                          
+RSLTDATABASE     = DELETE                                                       
+RSLTFILECOMP     = OFF                                                          
+SCRSPEC          = OFF                                                          
+SHEARELEMTYPE    = NASTRAN                                                      
+SHELLTVSMATTYPE  = FLEXIBLE                                                     
+SIGMA            = 0.000000E+00                                                 
+SKINGEN          = DISABLE                                                      
+SLINEEDGENORMTOL = 6.000000E+01                                                 
+SLINEFACENORMTOL = 3.000000E+01                                                 
+SLINEKAVG        = OFF                                                          
+SLINEKSFACT      = 1.000000E+00                                                 
+SLINEKSFACT2TC   = OFF                                                          
+SLINEMAXACTCORD  = 0                                                            
+SLINEMAXACTDIR   = XYZ                                                          
+SLINEMAXACTDIST  = AUTO                                                         
+SLINEMAXACTRATIO = 0.000000E+00                                                 
+SLINEMAXACTWIDTH = AUTO                                                         
+SLINEMAXDISPTOL  = 1.000000E-04                                                 
+SLINEMAXPENDIST  = AUTO                                                         
+SLINEOFFSETTOL   = AUTO                                                         
+SLINEOPENKSFACT  = 1.000000E-10                                                 
+SLINEPENTOL      = 2.000000E-01                                                 
+SLINEPOSTOL      = 1.000000E-02                                                 
+SLINEPROTOL      = AUTO                                                         
+SLINEPLANEZDIR   = 3                                                            
+SLINESLIDETYPE   = DYNAMIC                                                      
+SLINESTABKSFACT  = 0.000000E+00                                                 
+SLINESTABOPTION  = 0                                                            
+SLINESTRESSLOC   = MASTER                                                       
+SLINEUNLOADTOL   = 1.000000E-10                                                 
+SOLUTIONERROR    = OFF                                                          
+SORTMODEMASS     = ON                                                           
+SPARSEITERMETHOD = PRIMAL                                                       
+SPARSEITERMODE   = 0                                                            
+SPARSEITERTOL    = 1.000000E-06                                                 
+SPARSEMETHOD     = SHELL                                                        
+SPCGEN           = OFF                                                          
+STIFFRATIOTOL    = 1.000000E-08                                                 
+STIFFZEROTOL     = 1.000000E-15                                                 
+STRENGTHRATIO    = OFF                                                          
+STRESSERROR      = ON                                                           
+TABS             = 0.000000E+00                                                 
+TETARTOL         = 1.000000E+02                                                 
+TEMPDEPCOMP      = OFF                                                          
+TETEGRID         = OFF                                                          
+TETFACEMAXIATOL  = 1.700000E+02                                                 
+TETFACEMAXIATOL  = 1.700000E+02                                                 
+TETFACEMINIATOL  = 1.000000E+01                                                 
+TETFACESKEWTOL   = 8.000000E+01                                                 
+TETINODE         = OFF                                                          
+TETMAXEPADTOL    = 3.000000E+01                                                 
+TETMINEPLRTOL    = 5.000000E-01                                                 
+TETREDORD        = ON                                                           
+TOPTBTHRESHOLD   = 5.000000E-01                                                 
+TOPTDATABASE     = DELETE                                                       
+TOPTDESIGNTOL    = 1.000000E-13                                                 
+TOPTITERTOL      = 5.000000E-03                                                 
+TOPTMAXACTDIST   = -3.000000E+00                                                
+TRIARTOL         = 1.000000E+02                                                 
+TRIBNDEDORD      = ON                                                           
+TRIELEMTYPE      = DKT                                                          
+TRIEQVLOAD       = OFF                                                          
+TRIMAXEPADTOL    = 3.000000E+01                                                 
+TRIMAXIATOL      = 1.700000E+02                                                 
+TRIMEMREDORD     = ON                                                           
+TRIMINEPLRTOL    = 5.000000E-01                                                 
+TRIMINIATOL      = 1.000000E+01                                                 
+TRIRNODE         = OFF                                                          
+TRISKEWTOL       = 6.500000E+01                                                 
+TSAI2LARC02      = ON                                                           
+TSAI2MCT         = OFF                                                          
+TSAI2MCTBVF      = AUTO                                                         
+TSAI2MCTFVF      = AUTO                                                         
+UNITS            = ---                                                          
+UNRESEQGRID      = ON                                                           
+VFM2ACB          = OFF                                                          
+VFMADDMETHOD     = ASSEMBLY                                                     
+VFMINTERACTTOL   = 1.000000E-10                                                 
+VFMNORMTOL       = 3.000000E+01                                                 
+USAWETSURFACE    = 0                                                            
+W3               = 0.000000E+00                                                 
+W4               = 0.000000E+00                                                 
+WARNING          = ON                                                           
+WTMASS           = 1.000000E+00                                                 
+XDAMP            = ON                                                           
+ZERONPDELEMMASS  = OFF                                                          
+ZONADATAOUT      = OFF                                                          
+
+DATABASE STORAGE STATISTICS                                                     
+
+STORAGE METHOD                                                                  
+                                                                                
+MODEL TRANSLATION DATA        = MEMORY                                          
+GRID POINT COORDINATE DATA    = MEMORY                                          
+ELEMENT DIRECTION COSINE DATA = MEMORY                                          
+ELEMENT STIFFNESS DATA        = DISK                                            
+ELEMENT MASS DATA             = DISK                                            
+GRID POINT LOAD DATA          = DISK                                            
+ELEMENT LOAD DATA             = MEMORY                                          
+ELEMENT RESULTS DATA          = MEMORY                                          
+NEUTRAL RESULTS DATA          = MEMORY                                          
+
+STORAGE SPACE REQUIRED                                                          
+                                                                                
+MODEL TRANSLATION DATA        =     100340 WORDS        0.8 MEGABYTES           
+GRID POINT COORDINATE DATA    =         21 WORDS        0.0 MEGABYTES           
+ELEMENT DIRECTION COSINE DATA =         60 WORDS        0.0 MEGABYTES           
+ELEMENT STIFFNESS DATA        =          0 WORDS        0.0 MEGABYTES           
+ELEMENT MASS DATA             =          0 WORDS        0.0 MEGABYTES           
+GRID POINT LOAD DATA          =        242 WORDS        0.0 MEGABYTES           
+ELEMENT LOAD DATA             =        225 WORDS        0.0 MEGABYTES           
+ELEMENT RESULTS DATA          =        100 WORDS        0.0 MEGABYTES           
+OUTPUT SET DATA               =          1 WORDS        0.0 MEGABYTES           
+NEUTRAL RESULTS DATA          =        336 WORDS        0.0 MEGABYTES           
+                                                                                
+TOTAL                         =       1013 WORDS        0.8 MEGABYTES           
+
+WARNING AND ERROR MESSAGE SUMMARY                                               
+                                                                                
+WARNING T2104: UNRECOGNIZED CASE CONTROL COMMAND                            (1) 
+WARNING E5010: ONE OR MORE NON-ZERO DEGREES OF FREEDOM WERE AUTO-CONSTRA... (1) 
+                                                                                
+
+MODEL ANALYSIS TIME SUMMARY                                                     
+                                                                                
+TOTAL CPU TIME = 1.4 SECONDS                                                    
+WALLCLOCK TIME = 2.6 SECONDS                                                    
+
+EXECUTION TERMINATED NORMALLY                                                   
+                                                                                
+TOTAL WARNINGS     = 2                                                          
+TOTAL FATAL ERRORS = 0                                                          

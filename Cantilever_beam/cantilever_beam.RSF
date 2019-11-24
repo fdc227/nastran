@@ -1,0 +1,24 @@
+                                                                                
+ADS NASTRAN VERSION 12.0.0.121  04:34  11/22/19                                 
+                                                                                
+MAXIMUM STIFFNESS MATRIX DIAGONAL =  1.0001E+06  AT GRID 5 COMPONENT 3          
+MINIMUM STIFFNESS MATRIX DIAGONAL =  0.0000E+00  AT GRID 6 COMPONENT 6          
+                                                                                
+NUMBER OF NEGATIVE TERMS ON FACTOR DIAGONAL = 0                                 
+MAXIMUM MATRIX FACTOR DIAGONAL RATIO = 1.600E+01 AT GRID 3 COMPONENT 5          
+                                                                                
+FACTORED SPARSE MATRIX SIZE =         100284 WORDS        0.8 MEGABYTES         
+ADDITIONAL MEMORY ALLOCATED =         250432 WORDS        1.9 MEGABYTES         
+                                                                                
+MAXIMUM DISPLACEMENT MAGNITUDE =  9.999224E-02  AT GRID 6                       
+MAXIMUM DISPLACEMENT MAGNITUDE =  1.334168E-01  AT GRID 6                       
+MAXIMUM ROTATION MAGNITUDE     =  2.999767E-02  AT GRID 6                       
+MAXIMUM ROTATION MAGNITUDE     =  3.581189E-02  AT GRID 6                       
+                                                                                
+EPSILON       =  2.888555E-14                                                   
+EPSILON       =  3.341035E-15                                                   
+STRAIN ENERGY =  4.999612E+00                                                   
+STRAIN ENERGY =  9.453006E+00                                                   
+                                                                                
+TOTAL CPU TIME = 1.4 SECONDS                                                    
+WALLCLOCK TIME = 2.6 SECONDS                                                    

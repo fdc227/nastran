@@ -1,0 +1,1303 @@
+ 
+                                                                        11/22/19  04:34  ADS NASTRAN VERSION 12.0.0.121  PAGE      1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                *********   *         *  ***********   *********   **********   **********   *********   *         *
+               *         *  *         *       *       *         *  *         *  *           *            *       *
+               *         *  *         *       *       *         *  *         *  *           *            *     *
+               *         *  *         *       *       *         *  *         *  *           *            *   *
+               *         *  *         *       *       *         *  *         *  *           *            * *
+               ***********  *         *       *       *         *  *         *  **********   *********   *
+               *         *  *         *       *       *         *  *         *  *                     *  * *
+               *         *  *         *       *       *         *  *         *  *                     *  *   *
+               *         *  *         *       *       *         *  *         *  *                     *  *     *
+               *         *  *         *       *       *         *  *         *  *                     *  *       *
+               *         *   *********        *        *********   **********   **********   *********   *         *
+ 
+ 
+                     *         *   *********    *********   ***********  **********    *********   *         *
+                     **        *  *         *  *                 *       *         *  *         *  **        *
+                     * *       *  *         *  *                 *       *         *  *         *  * *       *
+                     *  *      *  *         *  *                 *       *         *  *         *  *  *      *
+                     *   *     *  *         *  *                 *       *         *  *         *  *   *     *
+                     *    *    *  ***********   *********        *       **********   ***********  *    *    *
+                     *     *   *  *         *            *       *       *     *      *         *  *     *   *
+                     *      *  *  *         *            *       *       *      *     *         *  *      *  *
+                     *       * *  *         *            *       *       *       *    *         *  *       * *
+                     *        **  *         *            *       *       *        *   *         *  *        **
+                     *         *  *         *   *********        *       *         *  *         *  *         *
+ 
+ 
+ 
+ 
+                                                          A U T O D E S K
+ 
+ 
+ 
+                                          REGISTERED TO:    EDITOR_STD_2018
+ 
+                                          SERIAL NUMBER:    AIX-IX86-01100
+ 
+                                          PROGRAM VERSION:  12.0.0.121
+ 
+                                          CPU VERSION:      Intel Pentium
+ 
+                                          OS VERSION:       Windows x64
+ 
+                                          DEVELOPED BY:     Autodesk, Inc
+                                                            111 McInnis Parkway
+                                                            San Rafael, CA 949033
+ 
+                                                            Support Phone  866-487-8680
+                                                            Support URL    subscription.autodesk.com
+                                                            Product URL    autodesk.com/simulation-software
+ 
+ 
+ 
+                                          Software (C) Copyright 2016
+                                          Autodesk, Inc.
+                                          All Rights Reserved.
+ 
+                                          Integrated PCGLSS Solver (C) Copyright 1992-2014
+                                          Computational Applications and System Integration, Inc.
+ 
+                                          NASTRAN is a registered trademark of the National Aeronautics
+ 
+ 
+ 
+ 
+ 
+ 
+                                                                        11/22/19  04:34  ADS NASTRAN VERSION 12.0.0.121  PAGE      2
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                          and Space Administration.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                                                        11/22/19  04:34  ADS NASTRAN VERSION 12.0.0.121  PAGE      3
+ 
+ 
+ 
+ 
+                                  M O D E L   I N I T I A L I Z A T I O N   D I R E C T I V E S
+ 
+ 
+ 
+ 
+ [FILE MANAGEMENT DIRECTIVES]
+ 
+ DATABASE         = c:\users\fangd\desktop\cantilever_beam\cantilever_beam.NDB
+ FILESIGNATURE    = V5VV
+ FILEBUFFERSIZE   = 100
+ FILESPEC         = C:\ProgramData\Autodesk\Nastran 2018\Temp\NDBV5VV.TMP\
+ NFILEBUFFER      = 1
+ PURGE            = ON
+ RSLTFILEPURGE    = ON
+ 
+ [OUTPUT CONTROL DIRECTIVES]
+ 
+ BULKDATAOUT      = OFF
+ BULKDATASORT     = ON
+ DISKSTATUS       = ON
+ ELAPSEDTIME      = OFF
+ FEMAPRSLTVECTID  = ON
+ INCRRSLTOUT      = ON
+ LEFTMARGIN       = 1
+ LINE             = 75
+ MEMORYSTATUS     = ON
+ MODLDATAFORMAT   = 3
+ MODLDATAOUT      = ON
+ MODLINITOUT      = ON
+ MODLSTATUS       = DISPLAY
+ OUTCONTSYMBOL    = OFF
+ OUTDISPGEOMMODE  = 1
+ OUTDISPSETID     = 100
+ OUTGRIDOFFSET    = 100000
+ OUTLOADSETID     = 100
+ OUTPAGEFORMAT    = OFF
+ OUTSPCSETID      = 100
+ OUTSTRNSETID     = 100
+ OUTTEMPSETID     = 100
+ OUTZEROVECT      = OFF
+ PCHFILEDBLEPRCS  = OFF
+ PCHFILETYPE      = NASTRAN
+ RSLTFILECOMP     = AUTO
+ RSLTFILEDBLEPRCS = OFF
+ RSLTFILETYPE     = FEMAP BINARY
+ SECONDS          = ON
+ SYSTEMSTATUS     = OFF
+ TRSLDISPDATA     = OFF
+ TRSLDMIDATA      = OFF
+ TRSLMODLDATA     = OFF
+ TRSLPRESDATA     = OFF
+ TRSLRBSEDATA     = OFF
+ TRSLSPCDATA      = OFF
+ TRSLSTRNDATA     = OFF
+ TRSLTEMPDATA     = OFF
+ XYPLOTCSVOUT     = OFF
+ 
+ [MEMORY MANAGEMENT DIRECTIVES]
+ 
+ MAXRAM           = 0
+ MINRAM           = 0
+ RAM              = 0
+ RESERVEDRAM      = 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                                                        11/22/19  04:34  ADS NASTRAN VERSION 12.0.0.121  PAGE      4
+ 
+ 
+ 
+ 
+                                  M O D E L   I N I T I A L I Z A T I O N   D I R E C T I V E S
+ 
+ 
+ 
+ [PROGRAM CONTROL DIRECTIVES]
+ 
+ DECOMPAUTOSIZE   = 50000
+ DECOMPMETHOD     = AUTO
+ DYNRSLTMETHOD    = AUTO
+ EXTRACTAUTOSIZE  = 10000
+ EXTRACTMETHOD    = AUTO
+ GPWEIGHTMETHOD   = AUTO
+ LICENSEMANAGER   = HANDSHAKE
+ RESTART          = OFF
+ RSPECDISPMETHOD  = NODAL
+ RSPECVECTMETHOD  = ON
+ SHELLEGRID       = OFF
+ SOLIDEGRID       = OFF
+ WAITFORLICENSE   = 3
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/22/19  04:34  ADS NASTRAN VERSION 12.0.0.121  PAGE      5
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ WARNING T2104: UNRECOGNIZED CASE CONTROL COMMAND
+ DIAG 8
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/22/19  04:34  ADS NASTRAN VERSION 12.0.0.121  PAGE      6
+ 
+ 
+ 
+ 
+                         S U B C A S E   C O N S T R A I N T   A N D   L O A D   S E T   D E F I N I T I O N
+ 
+    SUBCASE                                LABEL                               CONSTRAINT SET IDS             LOAD SET IDS
+      ID                                                                         SPC        MPC       LOAD      DEFORM   TEMPERATURE
+        1     TIP LOAD AT END                                                     10       NONE         10       NONE       NONE
+        2     GRAVITY LOAD                                                        10       NONE         20       NONE       NONE
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/22/19  04:34  ADS NASTRAN VERSION 12.0.0.121  PAGE      7
+ 
+ 
+ 
+ 
+                                    B A R   E L E M E N T   P R O P E R T Y   D E F I N I T I O N
+ 
+   PROPERTY     MATERIAL         AREA          I1           I2          I12            J           K1           K2           NSM
+      ID           ID
+        1            1         2.654E-03    5.869E-07    0.000E+00    0.000E+00    5.869E-15    0.000E+00    0.000E+00    0.000E+00
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/22/19  04:34  ADS NASTRAN VERSION 12.0.0.121  PAGE      8
+ 
+ 
+ 
+ 
+                                      I S O T R O P I C   M A T E R I A L   D E F I N I T I O N
+ 
+   MATERIAL           E            G           NU           RHO         ALPHA        T-REF
+      ID
+        1         7.100E+10    2.669E+10    3.300E-01    2.700E+03    0.000E+00    0.000E+00
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/22/19  04:34  ADS NASTRAN VERSION 12.0.0.121  PAGE      9
+ 
+ 
+ 
+ 
+                              S U B C A S E   V E C T O R   O U T P U T   S E T   D E F I N I T I O N
+ 
+    SUBCASE          LOAD         DISPLACEMENT       VELOCITY       ACCELERATION       SPC FORCE        MPC FORCE
+      ID            VECTOR           VECTOR           VECTOR           VECTOR           VECTOR           VECTOR
+        1            NONE              ALL             NONE             NONE             NONE             NONE
+        2            NONE              ALL             NONE             NONE             NONE             NONE
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/22/19  04:34  ADS NASTRAN VERSION 12.0.0.121  PAGE     10
+ 
+ 
+ 
+ 
+                             S U B C A S E   E L E M E N T   O U T P U T   S E T   D E F I N I T I O N
+ 
+    SUBCASE         ELEMENT          ELEMENT          ELEMENT          ELEMENT
+      ID             FORCE           STRESS           STRAIN        STRAIN ENERGY
+        1            NONE             NONE             NONE             NONE
+        2            NONE             NONE             NONE             NONE
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/22/19  04:34  ADS NASTRAN VERSION 12.0.0.121  PAGE     11
+ 
+ 
+ 
+ 
+                                S U B C A S E   G R I D   O U T P U T   S E T   D E F I N I T I O N
+ 
+    SUBCASE        GRID POINT      GRID POINT       GRID POINT    GRID POINT STRESS
+      ID             FORCE           STRESS           STRAIN        DISCONTINUITY
+        1            NONE             NONE             NONE             NONE
+        2            NONE             NONE             NONE             NONE
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/22/19  04:34  ADS NASTRAN VERSION 12.0.0.121  PAGE     12
+ 
+ 
+ 
+ 
+                    B A R   E L E M E N T   S T R E S S   R E C O V E R Y   P R O P E R T Y   D E F I N I T I O N
+ 
+   PROPERTY          C1           C2           D1           D2           E1           E2           F1           F2
+      ID
+        1         0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/22/19  04:34  ADS NASTRAN VERSION 12.0.0.121  PAGE     13
+ 
+ 
+ 
+ 
+                                         M O D E L   P A R A M E T E R   D E F I N I T I O N
+ 
+ 
+ 
+ 
+ 
+ 
+ ELEMENT LOAD VECTOR FORMULATION PARAMETERS
+ 
+ BAR ELEMENT EQUIVALENT LOAD VECTOR FORMULATION    = ON
+ 
+ 
+ 
+ MODEL SOLUTION SEQUENCE PARAMETERS
+ 
+ STIFFNESS MATRIX AUTOMATIC SINGLE POINT CONSTRAINT                                = ON
+ STIFFNESS MATRIX DIAGONAL RATIO TOLERANCE FOR AUTOMATIC SINGLE POINT CONSTRAINT   = 1.000000E-08
+ STIFFNESS MATRIX FACTOR DIAGONAL RATIO TOLERANCE FOR MECHANISM DETECTION          = 1.000000E+05
+ FLOATING POINT PRECISION CONSTANT FOR STIFFNESS MATRIX FACTORIZATION              = 1.000000E-15
+ MODEL RESULTS FLOATING POINT ZERO TOLERANCE                                       = 1.000000E-15
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/22/19  04:34  ADS NASTRAN VERSION 12.0.0.121  PAGE     14
+ 
+ 
+ 
+ 
+                                                M O D E L   D A T A B A S E   S I Z E
+ 
+ 
+ 
+ 
+ MODEL DATABASE SIZE
+ 
+ SUBCASES                     =        2
+ GRID POINTS                  =        7
+ ELEMENTS                     =        5
+ ELEMENT PROPERTIES           =        1
+ MATERIAL PROPERTIES          =        1
+ SINGLE POINT CONSTRAINTS     =        9
+ GRID POINT FORCES            =        1
+ GRAVITY LOADS                =        1
+ SETS                         =        1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/22/19  04:34  ADS NASTRAN VERSION 12.0.0.121  PAGE     15
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MODEL SIZE    =          42 DEGREES OF FREEDOM
+ MATRIX SIZE   =      100312 WORDS        0.8 MEGABYTES
+ SEMIBANDWIDTH =          11 WORDS
+ 
+ GLOBAL STIFFNESS MATRIX ASSEMBLY STATISTICS
+ 
+ SPARSE MATRIX SIZE =     100312 WORDS        0.8 MEGABYTES
+ MEMORY ALLOCATED   =     150468 WORDS        1.1 MEGABYTES
+ 
+ MAXIMUM GLOBAL STIFFNESS MATRIX TERM ZEROED =  0.0000E+00
+ MINIMUM GLOBAL STIFFNESS MATRIX TERM ZEROED =  0.0000E+00
+ REDUCTION IN GLOBAL STIFFNESS MATRIX SIZE   =  0.24 PERCENT
+ 
+ ASSEMBLY TIME FOR 5 ELEMENTS = 0.0 SECONDS
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/22/19  04:34  ADS NASTRAN VERSION 12.0.0.121  PAGE     16
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ DIAGONAL MASS MATRIX FORMULATION USED
+ 
+ ASSEMBLY TIME FOR 5 ELEMENTS = 0.0 SECONDS
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/22/19  04:34  ADS NASTRAN VERSION 12.0.0.121  PAGE     17
+ 
+ 
+ 
+ 
+                                                    P A R T   D E F I N I T I O N
+ 
+   PROPERTY     MATERIAL       PROPERTY           BOUNDING DIMENSIONS                MASS       VOLUME          GRID      ELEMENTS
+      ID           ID            TYPE          D1          D2          D3                                      POINTS
+        1            1            BAR      5.0000E+00  0.0000E+00  0.0000E+00     3.5829E+01  1.3270E-02           6            5
+ 
+ 
+    TOTAL                                  5.0000E+00  0.0000E+00  0.0000E+00     3.5829E+01  1.3270E-02           6            5
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/22/19  04:34  ADS NASTRAN VERSION 12.0.0.121  PAGE     18
+ 
+ 
+ TIP LOAD AT END                                                     SUBCASE 1
+ 
+                                      G R I D   P O I N T   S I N G U L A R I T Y   T A B L E
+ 
+     GRID               STRONGEST                  DIRECTION OF SINGULARITY                  STIFFNESS
+      ID                COMPONENT            T1/R1          T2/R2          T3/R3               RATIO
+        2                   2             0.000000E+00   1.000000E+00   0.000000E+00        0.000000E+00
+        2                   4             1.000000E+00   0.000000E+00   0.000000E+00        9.398496E-10
+        2                   6             0.000000E+00   0.000000E+00   1.000000E+00        0.000000E+00
+        3                   2             0.000000E+00   1.000000E+00   0.000000E+00        0.000000E+00
+        3                   4             1.000000E+00   0.000000E+00   0.000000E+00        9.398496E-10
+        3                   6             0.000000E+00   0.000000E+00   1.000000E+00        0.000000E+00
+        4                   2             0.000000E+00   1.000000E+00   0.000000E+00        0.000000E+00
+        4                   4             1.000000E+00   0.000000E+00   0.000000E+00        9.398496E-10
+        4                   6             0.000000E+00   0.000000E+00   1.000000E+00        0.000000E+00
+        5                   2             0.000000E+00   1.000000E+00   0.000000E+00        0.000000E+00
+        5                   4             1.000000E+00   0.000000E+00   0.000000E+00        9.398496E-10
+        5                   6             0.000000E+00   0.000000E+00   1.000000E+00        0.000000E+00
+        6                   2             0.000000E+00   1.000000E+00   0.000000E+00        0.000000E+00
+        6                   4             1.000000E+00   0.000000E+00   0.000000E+00        9.398496E-10
+        6                   6             0.000000E+00   0.000000E+00   1.000000E+00        0.000000E+00
+ 
+ 
+ 
+ 
+ MAXIMUM STIFFNESS MATRIX DIAGONAL =  1.0001E+06  AT GRID 5 COMPONENT 3
+ MINIMUM STIFFNESS MATRIX DIAGONAL =  0.0000E+00  AT GRID 6 COMPONENT 6
+ 
+ WARNING E5010: ONE OR MORE NON-ZERO DEGREES OF FREEDOM WERE AUTO-CONSTRAINED
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/22/19  04:34  ADS NASTRAN VERSION 12.0.0.121  PAGE     19
+ 
+ 
+ TIP LOAD AT END                                                     SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ GLOBAL STIFFNESS MATRIX FACTORIZATION STATISTICS
+ 
+ NUMBER OF NEGATIVE TERMS ON FACTOR DIAGONAL = 0
+ MAXIMUM MATRIX FACTOR DIAGONAL RATIO = 1.600E+01 AT GRID 3 COMPONENT 5
+ 
+ REORDERING METHOD REQUESTED = AUTO
+ REORDERING METHOD USED      = VRM7
+ 
+ FACTORED SPARSE MATRIX SIZE =         100284 WORDS        0.8 MEGABYTES
+ ADDITIONAL MEMORY ALLOCATED =         250432 WORDS        1.9 MEGABYTES
+ 
+ FACTORIZATION TIME FOR 100284 WORDS = 0.0 SECONDS
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/22/19  04:34  ADS NASTRAN VERSION 12.0.0.121  PAGE     20
+ 
+ 
+ TIP LOAD AT END                                                     SUBCASE 1
+ 
+                                               D I S P L A C E M E N T   V E C T O R
+ 
+     GRID      COORDINATE        T1            T2            T3            R1            R2            R3
+      ID           ID
+        2            0      0.000000E+00  0.000000E+00  5.599565E-03  0.000000E+00 -1.079916E-02  0.000000E+00
+        3            0      0.000000E+00  0.000000E+00  2.079839E-02  0.000000E+00 -1.919851E-02  0.000000E+00
+        4            0      0.000000E+00  0.000000E+00  4.319665E-02  0.000000E+00 -2.519804E-02  0.000000E+00
+        5            0      0.000000E+00  0.000000E+00  7.039454E-02  0.000000E+00 -2.879777E-02  0.000000E+00
+        6            0      0.000000E+00  0.000000E+00  9.999224E-02  0.000000E+00 -2.999767E-02  0.000000E+00
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  9.999224E-02  AT GRID 6
+ MAXIMUM ROTATION MAGNITUDE     =  2.999767E-02  AT GRID 6
+ 
+ EPSILON       =  2.888555E-14
+ STRAIN ENERGY =  4.999612E+00
+ 
+ SOLUTION TIME FOR 42 DEGREES OF FREEDOM = 0.0 SECONDS
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/22/19  04:34  ADS NASTRAN VERSION 12.0.0.121  PAGE     21
+ 
+ 
+ GRAVITY LOAD                                                        SUBCASE 2
+ 
+                                               D I S P L A C E M E N T   V E C T O R
+ 
+     GRID      COORDINATE        T1            T2            T3            R1            R2            R3
+      ID           ID
+        2            0      0.000000E+00  0.000000E+00  9.268960E-03  0.000000E+00 -1.727397E-02  0.000000E+00
+        3            0      0.000000E+00  0.000000E+00  3.230092E-02  0.000000E+00 -2.780688E-02  0.000000E+00
+        4            0      0.000000E+00  0.000000E+00  6.319745E-02  0.000000E+00 -3.328399E-02  0.000000E+00
+        5            0      0.000000E+00  0.000000E+00  9.774539E-02  0.000000E+00 -3.539057E-02  0.000000E+00
+        6            0      0.000000E+00  0.000000E+00  1.334168E-01  0.000000E+00 -3.581189E-02  0.000000E+00
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  1.334168E-01  AT GRID 6
+ MAXIMUM ROTATION MAGNITUDE     =  3.581189E-02  AT GRID 6
+ 
+ EPSILON       =  3.341035E-15
+ STRAIN ENERGY =  9.453006E+00
+ 
+ SOLUTION TIME FOR 42 DEGREES OF FREEDOM = 0.0 SECONDS
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/22/19  04:34  ADS NASTRAN VERSION 12.0.0.121  PAGE     22
+ 
+ 
+ 
+ 
+                                            L O A D   V E C T O R   R E S U L T A N T
+ 
+    SUBCASE         T1            T2            T3            R1            R2            R3
+      ID
+        1      0.000000E+00  0.000000E+00  1.000000E+02  0.000000E+00 -5.000000E+02  0.000000E+00
+        2      0.000000E+00  0.000000E+00  3.511242E+02  0.000000E+00 -8.778105E+02  0.000000E+00
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/22/19  04:34  ADS NASTRAN VERSION 12.0.0.121  PAGE     23
+ 
+ 
+ 
+ 
+                           S I N G L E   P O I N T   C O N S T R A I N T   V E C T O R   R E S U L T A N T
+ 
+    SUBCASE         T1            T2            T3            R1            R2            R3
+      ID
+        1      0.000000E+00  0.000000E+00 -1.000000E+02  0.000000E+00  5.000000E+02  0.000000E+00
+        2      0.000000E+00  0.000000E+00 -3.511242E+02  0.000000E+00  8.778105E+02  0.000000E+00
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/22/19  04:34  ADS NASTRAN VERSION 12.0.0.121  PAGE     24
+ 
+ 
+ 
+ 
+                             M U L T I P O I N T   C O N S T R A I N T   V E C T O R   R E S U L T A N T
+ 
+    SUBCASE         T1            T2            T3            R1            R2            R3
+      ID
+        1      0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        2      0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/22/19  04:34  ADS NASTRAN VERSION 12.0.0.121  PAGE     25
+ 
+ 
+ 
+ 
+                                            M A X I M U M   A P P L I E D   L O A D S
+ 
+    SUBCASE         T1            T2            T3            R1            R2            R3
+      ID
+        1      0.000000E+00  0.000000E+00  1.000000E+02  0.000000E+00  0.000000E+00  0.000000E+00
+        2      0.000000E+00  0.000000E+00  7.022484E+01  0.000000E+00  0.000000E+00  0.000000E+00
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/22/19  04:34  ADS NASTRAN VERSION 12.0.0.121  PAGE     26
+ 
+ 
+ 
+ 
+                                            M A X I M U M   D I S P L A C E M E N T S
+ 
+    SUBCASE         T1            T2            T3            R1            R2            R3
+      ID
+        1      0.000000E+00  0.000000E+00  9.999224E-02  0.000000E+00  2.999767E-02  0.000000E+00
+        2      0.000000E+00  0.000000E+00  1.334168E-01  0.000000E+00  3.581189E-02  0.000000E+00
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/22/19  04:34  ADS NASTRAN VERSION 12.0.0.121  PAGE     27
+ 
+ 
+ 
+ 
+                          M A X I M U M   F O R C E S   O F   S I N G L E   P O I N T   C O N S T R A I N T
+ 
+    SUBCASE         T1            T2            T3            R1            R2            R3
+      ID
+        1      0.000000E+00  0.000000E+00  1.000000E+02  0.000000E+00  5.000000E+02  0.000000E+00
+        2      0.000000E+00  0.000000E+00  3.511242E+02  0.000000E+00  8.778105E+02  0.000000E+00
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/22/19  04:34  ADS NASTRAN VERSION 12.0.0.121  PAGE     28
+ 
+ 
+ 
+ 
+                                   I N T E R N A L   L O A D   V E C T O R   R E S U L T A N T
+ 
+    SUBCASE         T1            T2            T3            R1            R2            R3
+      ID
+        1      0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        2      0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/22/19  04:34  ADS NASTRAN VERSION 12.0.0.121  PAGE     29
+ 
+ 
+ 
+ 
+                                      A N A L Y S I S   D I R E C T I V E   D E F I N I T I O N
+ 
+ 
+ 
+ BUFFEREDDECKREAD = ON
+ BULKDATAOUT      = OFF
+ BULKDATASORT     = ON
+ DATABASE         = c:\users\fangd\desktop\cantilever_beam\cantilever_beam.NDB
+ DECOMPAUTOSIZE   = 50000
+ DECOMPMETHOD     = VSS
+ DISKSTATUS       = ON
+ DYNRSLTMETHOD    = DISP
+ ELAPSEDTIME      = OFF
+ EXTRACTAUTOSIZE  = 10000
+ EXTRACTMETHOD    = SUBSPACE
+ FEMAPRSLTVECTID  = ON
+ FILEBUFFERSIZE1  = 100
+ FILEBUFFERSIZE2  = 100
+ FILEBUFFERSIZE3  = 100
+ FILEBUFFERSIZE4  = 100
+ FILESIGNATURE    = V5VV
+ FILESPEC1        = C:\ProgramData\Autodesk\Nastran 2018\Temp\NDBV5VV.TMP\
+ FILESPEC2        = C:\ProgramData\Autodesk\Nastran 2018\Temp\NDBV5VV.TMP\
+ FILESPEC3        = C:\ProgramData\Autodesk\Nastran 2018\Temp\NDBV5VV.TMP\
+ FILESPEC4        = C:\ProgramData\Autodesk\Nastran 2018\Temp\NDBV5VV.TMP\
+ GPWEIGHTMETHOD   = VECTOR
+ INCRRSLTOUT      = OFF
+ INMEMORYIO       = ON
+ LEFTMARGIN       = 1
+ LICENSEMANAGER   = HANDSHAKE
+ LINE             = 75
+ MAXRAM           = 0
+ MEMORYSTATUS     = ON
+ MINRAM           = 0
+ MODLDATAFORMAT   = 3
+ MODLDATAOUT      = ON
+ MODLINITOUT      = ON
+ MODLSTATUS       = DISPLAY
+ NDISKS           = 1
+ NFILEBUFFER1     = 1
+ NFILEBUFFER2     = 1
+ NFILEBUFFER3     = 1
+ NFILEBUFFER4     = 1
+ NPROCESSORS      = 2
+ OPTIMIZESETTINGS = NONE
+ OUTCONTSYMBOL    = OFF
+ OUTDISPGEOMMODE  = 1
+ OUTDISPSETID     = 100
+ OUTLOADSETID     = 100
+ OUTPAGEFORMAT    = OFF
+ OUTGRIDOFFSET    = 100000
+ OUTSPCSETID      = 100
+ OUTSTRNSETID     = 100
+ OUTTEMPSETID     = 100
+ OUTZEROVECT      = OFF
+ PCHFILEDBLEPRCS  = OFF
+ PCHFILETYPE      = NASTRAN
+ PURGE            = ON
+ RAM              = 13072
+ RESERVEDRAM      = 0
+ RESTART          = OFF
+ RSLTFILEDBLEPRCS = OFF
+ RSLTFILEFORMAT   = PLATFORM
+ RSLTFILEPURGE    = ON
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/22/19  04:34  ADS NASTRAN VERSION 12.0.0.121  PAGE     30
+ 
+ 
+ 
+ 
+                                      A N A L Y S I S   D I R E C T I V E   D E F I N I T I O N
+ 
+ 
+ 
+ RSLTFILETYPE     = FEMAP BINARY
+ RSLTLABEL        = 1
+ RSPECDISPMETHOD  = NODAL
+ RSPECVECTMETHOD  = OFF
+ SECONDS          = ON
+ SYSTEMSTATUS     = OFF
+ TOPTENGINE       = AUTO
+ TRSLDDAMDATA     = OFF
+ TRSLDFGMDATA     = OFF
+ TRSLDISPDATA     = OFF
+ TRSLDMIDATA      = OFF
+ TRSLLOADDATA     = OFF
+ TRSLMODLDATA     = OFF
+ TRSLPRESDATA     = OFF
+ TRSLRBSEDATA     = OFF
+ TRSLSPCDATA      = OFF
+ TRSLSTRNDATA     = OFF
+ TRSLTEMPDATA     = OFF
+ TRSLTOQEDATA     = OFF
+ SHELLEGRID       = OFF
+ SOLIDEGRID       = OFF
+ WAITFORLICENSE   = 3
+ XYPLOTCSVOUT     = OFF
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/22/19  04:34  ADS NASTRAN VERSION 12.0.0.121  PAGE     31
+ 
+ 
+ 
+ 
+                                      A N A L Y S I S   P A R A M E T E R   D E F I N I T I O N
+ 
+ 
+ 
+ ACBPRESSET       = 0
+ ACBREFPRES       = 0.000000E+00
+ ACBVC            = 0.000000E+00
+ ADAPTLNCONTACT   = AUTO
+ ADAPTTIMESTEP    = OFF
+ ADDNLTOQUADLOAD  = OFF
+ ADDPRESTRESS     = ON
+ ADDPSDAFREQ      = OFF
+ ALIGNEDGENODE    = OFF
+ ALPHA            = 0.000000E+00
+ ALTFAILINDEXFORM = OFF
+ AUTOBPD          = OFF
+ AUTOCORDROTATE   = ON
+ AUTOFIXELEMGEOM  = ON
+ AUTOFIXRIGIDELEM = ON
+ AUTOFIXRIGIDSPC  = OFF
+ AUTOSPC          = ON
+ BARDKMETHOD      = BOTH
+ BAREQVLOAD       = ON
+ BETA             = 0.000000E+00
+ BISECT           = ON
+ BOLTPRELOADTOL   = 0.000000E+00
+ BPDEFDIAG        = 0.000000E+00
+ CB1              = 1.000000E+00
+ CB2              = 1.000000E+00
+ CK1              = 1.000000E+00
+ CK2              = 1.000000E+00
+ CLOSE            = 1.000000E+00
+ CM1              = 1.000000E+00
+ CM2              = 1.000000E+00
+ COMPE1RSF        = DISABLE
+ COMPE2RSF        = DISABLE
+ COMPE3RSF        = DISABLE
+ COMPG12RSF       = DISABLE
+ COMPG23RSF       = DISABLE
+ COMPG31RSF       = DISABLE
+ COMPILSMETHOD    = COMPONENT
+ COMPK1           = AUTO
+ COMPK2           = AUTO
+ COMPRSLTOUT      = OFF
+ CONTACTGEN       = DISABLE
+ CONTACTTOL       = AUTO
+ CONTACTSTAB      = OFF
+ CONVMATRIX       = OFF
+ COUPMASS         = OFF
+ CP1              = 1.000000E+00
+ CP2              = 1.000000E+00
+ CYSYMGEN         = 0
+ CYSYMTOL         = 1.000000E-10
+ DATABASEACCEL    = ON
+ DDAMPHASE        = 0
+ DELTASTRAINEGOUT = OFF
+ DFREQ            = 1.000000E-05
+ DIRSTRESSTYPE    = 0
+ DISPGEOMSFACT    = 1.000000E+00
+ DMILABEL         =
+ DMIPDIAG         = OFF
+ DYNLMDIRECTDIF   = OFF
+ DYNRESPEIGVOUT   = OFF
+ DYNSOLACCEL      = ON
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/22/19  04:34  ADS NASTRAN VERSION 12.0.0.121  PAGE     32
+ 
+ 
+ 
+ 
+                                      A N A L Y S I S   P A R A M E T E R   D E F I N I T I O N
+ 
+ 
+ 
+ DYNSOLDIRECTINT  = ON
+ DYNSOLRELGRID    = 0
+ EDGENODETOL      = AUTO
+ EIGENFLEXFREQ    = 1.000000E-01
+ EIGENSHIFTSFACT  = 1.000000E+04
+ EIGENSOLACCEL    = ON
+ ELEMGEOMCHECKS   = OFF
+ ELEMGEOMFATAL    = OFF
+ ELEMGEOMOUT      = OFF
+ ELEMRSLTCORD     = MATERIAL
+ ELEMRSLTMAXTYPE  = MAXCORNER
+ EMODES           = 30
+ ENHCBARRSLT      = OFF
+ ENHCCONTACTRSLT  = OFF
+ ENHCQUADRSLT     = OFF
+ EPSILONFLOAT     = 1.000000E-15
+ EQVSTRESSTYPE    = 0
+ FACTDIAG         = 1.000000E-10
+ FACTRATIOTOL     = 1.000000E+05
+ FIXNLTOQUAD      = ON
+ FLOATINZERO      = 1.000000E-15
+ FLOATOUTZERO     = 1.000000E-15
+ FREQRESPRSLTINCR = 10
+ FREQRESPRSLTOUT  = ON
+ G                = 0.000000E+00
+ GPFORCEMETHOD    = NASTRAN
+ GPRSLTAVEMETHOD  = INVARIANT
+ GPSTRESS         = OFF
+ GPWEIGHT         = OFF
+ GRDPNT           = -1
+ GRIDCOLTOL       = 0.000000E+00
+ GRIDTEMPASGN     = OFF
+ GRIDTEMPAVE      = OFF
+ HEXARTOL         = 1.000000E+02
+ HEXENODE         = OFF
+ HEXFACEMAXIATOL  = 1.650000E+02
+ HEXFACEMINIATOL  = 2.500000E+01
+ HEXFACESKEWTOL   = 6.500000E+01
+ HEXFACETAPERTOL  = 7.500000E-01
+ HEXFACEWARPTOL   = 4.500000E+01
+ HEXINODE         = OFF
+ HEXMAXEPADTOL    = 3.000000E+01
+ HEXMINEPLRTOL    = 5.000000E-01
+ HEXREDORD        = ON
+ HFREQ            = 1.000000E+30
+ HPNLMATREDORD    = AUTO
+ HPNLMATSFACT     = AUTO
+ INERTIALRELIEF   = OFF
+ INITSLINEKSFACT  = 1.000000E-02
+ INITSTRAINSFACT  = 1.000000E+00
+ J4ROT            = AUTO
+ KDAMP            = 1
+ K6ROT            = 1.000000E+02
+ KRIGIDELEM       = 7.938041E+12
+ LANCZOSVECT      = OFF
+ LANGLE           = GIMBAL
+ LARC02TSAITOL    = 2.000000E+00
+ LFREQ            = 0.000000E+00
+ LGDISP           = 0
+ LINEARCONTACT    = OFF
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/22/19  04:34  ADS NASTRAN VERSION 12.0.0.121  PAGE     33
+ 
+ 
+ 
+ 
+                                      A N A L Y S I S   P A R A M E T E R   D E F I N I T I O N
+ 
+ 
+ 
+ LMODES           = 0
+ LNCONTACTITERTOL = 1.000000E-02
+ M6ROT            = 0.000000E+00
+ MAXADJEDGE       = 100
+ MAXBISECTRESTART = OFF
+ MAXEIGENRESTART  = 5
+ MAXELEMGEOMMSG   = 10000
+ MAXIMPACTSTEP    = 0
+ MAXINCREFSTRAINP = AUTO
+ MAXLNCONTACTITER = -1
+ MAXSPARSEITER    = AUTO
+ MAXSRITER        = 100
+ MAXTOPTITER      = 200
+ MECHSTRAIN       = OFF
+ MINSPARSEITER    = 50
+ MODALDATABASE    = DELETE
+ MODEFSPCSTORE    = ON
+ MODEPFACTOR      = ON
+ MODEVAROUT       = OFF
+ NBEAMINTNODE     = 2
+ NCBMODE          = 1
+ NCONTACTGEOMITER = 1
+ NDAMP            = 1.000000E-02
+ NITERCUPDATE     = AUTO
+ NITERKSUPDATE    = 3
+ NITERMUPDATE     = 3
+ NITERPFUPDATE    = 1
+ NITERSUPDATE     = 8
+ NLAYERS          = 1
+ NLCOMPPLYFAIL    = OFF
+ NLINDATABASE     = DELETE
+ NLINDATALOADSF   = AUTO
+ NLINSOLACCEL     = 4
+ NLINSOLTOL       = 2
+ NLKDIAGAFACT     = 0.000000E+00
+ NLKDIAGCOMP      = 123456
+ NLKDIAGMINAFACT  = 0.000000E+00
+ NLKDIAGSET       = 0
+ NLLSSTRAINTYPE   = LOG
+ NLLSSTRESSTYPE   = CAUCHY
+ NLMATSFACT       = AUTO
+ NLMATTABLGEN     = 0.000000E+00
+ NLNPDKRESET      = OFF
+ NLSUBCREINIT     = OFF
+ NLTOL            = 2
+ NLTOQUAD         = ON
+ NLTRUESTRESS     = OFF
+ NOCOMPS          = ON
+ NRBCHECKMODES    = 0
+ NSUBINCRBISECT   = 200
+ NTOPTSTRESSDIV   = 10
+ OPTION           = ABS
+ OUTSETTOL        = 1.000000E-05
+ PARTGEOMOUT      = ON
+ PARTMASSOUT      = OFF
+ PCGLSSDMI        = OFF
+ PENTARTOL        = 1.000000E+02
+ PENTEGRID        = OFF
+ PENTFACEMAXIATOL = 1.650000E+02
+ PENTFACEMINIATOL = 2.500000E+01
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/22/19  04:34  ADS NASTRAN VERSION 12.0.0.121  PAGE     34
+ 
+ 
+ 
+ 
+                                      A N A L Y S I S   P A R A M E T E R   D E F I N I T I O N
+ 
+ 
+ 
+ PENTFACESKEWTOL  = 6.500000E+01
+ PENTFACETAPERTOL = 7.500000E-01
+ PENTFACEWARPTOL  = 4.500000E+01
+ PENTMAXEPADTOL   = 3.000000E+01
+ PENTMINEPLRTOL   = 5.000000E-01
+ PENTREDORD       = ON
+ PRGPST           = ON
+ PYRARTOL         = 1.000000E+02
+ PYREGRID         = OFF
+ PYRFACEMAXIATOL  = 1.700000E+02
+ PYRFACEMINIATOL  = 5.000000E+00
+ PYRFACESKEWTOL   = 8.000000E+01
+ PYRFACETAPERTOL  = 7.500000E-01
+ PYRFACEWARPTOL   = 4.500000E+01
+ PYRMAXEPADTOL    = 3.000000E+01
+ PYRMINEPLRTOL    = 5.000000E-01
+ PYRREDORD        = ON
+ QUADARTOL        = 1.000000E+02
+ QUADBNDREDORD    = ON
+ QUADELEMTYPE     = SRI
+ QUADEQVLOAD      = OFF
+ QUADINODE        = OFF
+ QUADMAXEPADTOL   = 3.000000E+01
+ QUADMAXIATOL     = 1.650000E+02
+ QUADMEMREDORD    = ON
+ QUADMINEPLRTOL   = 5.000000E-01
+ QUADMINIATOL     = 2.500000E+01
+ QUADRNODE        = OFF
+ QUADSECT         = OFF
+ QUADSKEWTOL      = 6.500000E+01
+ QUADTAPERTOL     = 7.500000E-01
+ QUADWARPLIMIT    = 4.500000E+01
+ QUADWARPTOL      = 4.500000E+01
+ RADMATRIX        = ON
+ RANDRESPINVLEVEL = 1
+ RANDRESPRSLTOUT  = ON
+ RBCHECKLEVEL     = 0
+ RBCHECKMODES     = 0
+ RESEQGRID        = OFF
+ RESEQGRIDMETHOD  = AUTO
+ RESEQSTARTGRID   = 0
+ RESVEC           = OFF
+ RESVPGF          = 1.000000E-06
+ RIGIDBODYMODE    = AUTO
+ RIGIDELEM2ELAS   = OFF
+ RIGIDELEMCORD    = AUTO
+ RIGIDELEMTYPE    = RBE
+ ROTINERTIA       = ON
+ RSPECTRA         = OFF
+ RSLTDATABASE     = DELETE
+ RSLTFILECOMP     = OFF
+ SCRSPEC          = OFF
+ SHEARELEMTYPE    = NASTRAN
+ SHELLTVSMATTYPE  = FLEXIBLE
+ SIGMA            = 0.000000E+00
+ SKINGEN          = DISABLE
+ SLINEEDGENORMTOL = 6.000000E+01
+ SLINEFACENORMTOL = 3.000000E+01
+ SLINEKAVG        = OFF
+ SLINEKSFACT      = 1.000000E+00
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/22/19  04:34  ADS NASTRAN VERSION 12.0.0.121  PAGE     35
+ 
+ 
+ 
+ 
+                                      A N A L Y S I S   P A R A M E T E R   D E F I N I T I O N
+ 
+ 
+ 
+ SLINEKSFACT2TC   = OFF
+ SLINEMAXACTCORD  = 0
+ SLINEMAXACTDIR   = XYZ
+ SLINEMAXACTDIST  = AUTO
+ SLINEMAXACTRATIO = 0.000000E+00
+ SLINEMAXACTWIDTH = AUTO
+ SLINEMAXDISPTOL  = 1.000000E-04
+ SLINEMAXPENDIST  = AUTO
+ SLINEOFFSETTOL   = AUTO
+ SLINEOPENKSFACT  = 1.000000E-10
+ SLINEPENTOL      = 2.000000E-01
+ SLINEPOSTOL      = 1.000000E-02
+ SLINEPROTOL      = AUTO
+ SLINEPLANEZDIR   = 3
+ SLINESLIDETYPE   = DYNAMIC
+ SLINESTABKSFACT  = 0.000000E+00
+ SLINESTABOPTION  = 0
+ SLINESTRESSLOC   = MASTER
+ SLINEUNLOADTOL   = 1.000000E-10
+ SOLUTIONERROR    = OFF
+ SORTMODEMASS     = ON
+ SPARSEITERMETHOD = PRIMAL
+ SPARSEITERMODE   = 0
+ SPARSEITERTOL    = 1.000000E-06
+ SPARSEMETHOD     = SHELL
+ SPCGEN           = OFF
+ STIFFRATIOTOL    = 1.000000E-08
+ STIFFZEROTOL     = 1.000000E-15
+ STRENGTHRATIO    = OFF
+ STRESSERROR      = ON
+ TABS             = 0.000000E+00
+ TETARTOL         = 1.000000E+02
+ TEMPDEPCOMP      = OFF
+ TETEGRID         = OFF
+ TETFACEMAXIATOL  = 1.700000E+02
+ TETFACEMINIATOL  = 1.000000E+01
+ TETFACESKEWTOL   = 8.000000E+01
+ TETINODE         = OFF
+ TETMAXEPADTOL    = 3.000000E+01
+ TETMINEPLRTOL    = 5.000000E-01
+ TETREDORD        = ON
+ TOPTBTHRESHOLD   = 5.000000E-01
+ TOPTDATABASE     = DELETE
+ TOPTDESIGNTOL    = 1.000000E-13
+ TOPTITERTOL      = 5.000000E-03
+ TOPTMAXACTDIST   = -3.000000E+00
+ TRIARTOL         = 1.000000E+02
+ TRIBNDEDORD      = ON
+ TRIELEMTYPE      = DKT
+ TRIEQVLOAD       = OFF
+ TRIMAXEPADTOL    = 3.000000E+01
+ TRIMAXIATOL      = 1.700000E+02
+ TRIMEMREDORD     = ON
+ TRIMINEPLRTOL    = 5.000000E-01
+ TRIMINIATOL      = 1.000000E+01
+ TRIRNODE         = OFF
+ TRISKEWTOL       = 6.500000E+01
+ TSAI2LARC02      = ON
+ TSAI2MCT         = OFF
+ TSAI2MCTBVF      = AUTO
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/22/19  04:34  ADS NASTRAN VERSION 12.0.0.121  PAGE     36
+ 
+ 
+ 
+ 
+                                      A N A L Y S I S   P A R A M E T E R   D E F I N I T I O N
+ 
+ 
+ 
+ TSAI2MCTFVF      = AUTO
+ UNITS            = ---
+ UNRESEQGRID      = ON
+ VFM2ACB          = OFF
+ VFMADDMETHOD     = ASSEMBLY
+ VFMINTERACTTOL   = 1.000000E-10
+ VFMNORMTOL       = 3.000000E+01
+ USAWETSURFACE    = 0
+ W3               = 0.000000E+00
+ W4               = 0.000000E+00
+ WARNING          = ON
+ WTMASS           = 1.000000E+00
+ WTMASSMETHOD     = NORAN
+ XDAMP            = ON
+ ZERONPDELEMMASS  = OFF
+ ZONADATAOUT      = OFF
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/22/19  04:34  ADS NASTRAN VERSION 12.0.0.121  PAGE     37
+ 
+ 
+ 
+ 
+                               W A R N I N G   A N D   E R R O R   M E S S A G E   S U M M A R Y
+ 
+ 
+ 
+ WARNING T2104: UNRECOGNIZED CASE CONTROL COMMAND                            (1)
+ WARNING E5010: ONE OR MORE NON-ZERO DEGREES OF FREEDOM WERE AUTO-CONSTRA... (1)
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/22/19  04:34  ADS NASTRAN VERSION 12.0.0.121  PAGE     38
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MODEL ANALYSIS TIME SUMMARY
+ 
+ TOTAL CPU TIME = 1.4 SECONDS
+ WALLCLOCK TIME = 2.6 SECONDS
+ 
+ EXECUTION TERMINATED NORMALLY
+ 
+ TOTAL WARNINGS     = 2
+ TOTAL FATAL ERRORS = 0
+ 
+ 
+ 
+ 
+ 
+ 
