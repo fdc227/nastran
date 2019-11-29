@@ -1,0 +1,57 @@
+$ FILENAME - DMIGFULL.DAT
+ID ROD TIC
+SOL 109
+TIME 10
+CEND
+$
+TITLE = PLANAR CANTILEVER BEAM
+DISP = ALL
+LABEL = GRAVITY LOAD
+SPC = 40 
+SET 100 = 1, 2, 3, 4, 5    
+IC = 100
+TSTEP = 70
+$
+BEGIN BULK
+$
+CROD, 1, 21, 1, 2
+CROD, 2, 21, 2, 3
+CROD, 3, 21, 3, 4
+CROD, 4, 21, 4, 5
+CROD, 5, 21, 5, 6
+
+GRID, 1, , 0., 0., 0., , 1
+GRID, 2, , 1., 0., 0., , 1
+GRID, 3, , 2., 0., 0., , 1
+GRID, 4, , 3., 0., 0., , 1
+GRID, 5, , 4., 0., 0., , 1
+GRID, 6, , 5., 0., 0., , 1
+MAT1, 22, 30.E6, , .33, 1.
+PROD, 21, 22, 4., 1.27 
+SPC1, 40, 123456, 1     
+TIC, 100, 1, 2, 0.2, 0.0   
+TIC, 100, 2, 2, 0.4, 0.0
+TIC, 100, 3, 2, 0.6, 0.0
+TIC, 100, 4, 2, 0.8, 0.0
+TIC, 100, 5, 2, 1.0, 0.0
+TIC, 100, 6, 2, 1.2, 0.0
+TSTEP, 70, 100, 0.1
+
+$
+ENDDATA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

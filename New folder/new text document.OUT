@@ -1,0 +1,4033 @@
+ 
+                                                                        11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE      1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                *********   *         *  ***********   *********   **********   **********   *********   *         *
+               *         *  *         *       *       *         *  *         *  *           *            *       *
+               *         *  *         *       *       *         *  *         *  *           *            *     *
+               *         *  *         *       *       *         *  *         *  *           *            *   *
+               *         *  *         *       *       *         *  *         *  *           *            * *
+               ***********  *         *       *       *         *  *         *  **********   *********   *
+               *         *  *         *       *       *         *  *         *  *                     *  * *
+               *         *  *         *       *       *         *  *         *  *                     *  *   *
+               *         *  *         *       *       *         *  *         *  *                     *  *     *
+               *         *  *         *       *       *         *  *         *  *                     *  *       *
+               *         *   *********        *        *********   **********   **********   *********   *         *
+ 
+ 
+                     *         *   *********    *********   ***********  **********    *********   *         *
+                     **        *  *         *  *                 *       *         *  *         *  **        *
+                     * *       *  *         *  *                 *       *         *  *         *  * *       *
+                     *  *      *  *         *  *                 *       *         *  *         *  *  *      *
+                     *   *     *  *         *  *                 *       *         *  *         *  *   *     *
+                     *    *    *  ***********   *********        *       **********   ***********  *    *    *
+                     *     *   *  *         *            *       *       *     *      *         *  *     *   *
+                     *      *  *  *         *            *       *       *      *     *         *  *      *  *
+                     *       * *  *         *            *       *       *       *    *         *  *       * *
+                     *        **  *         *            *       *       *        *   *         *  *        **
+                     *         *  *         *   *********        *       *         *  *         *  *         *
+ 
+ 
+ 
+ 
+                                                          A U T O D E S K
+ 
+ 
+ 
+                                          REGISTERED TO:    EDITOR_STD_2018
+ 
+                                          SERIAL NUMBER:    AIX-IX86-01100-0
+ 
+                                          PROGRAM VERSION:  12.0.0.121
+ 
+                                          CPU VERSION:      Intel Pentium
+ 
+                                          OS VERSION:       Windows x64
+ 
+                                          DEVELOPED BY:     Autodesk, Inc
+                                                            111 McInnis Parkway
+                                                            San Rafael, CA 949033
+ 
+                                                            Support Phone  866-487-8680
+                                                            Support URL    subscription.autodesk.com
+                                                            Product URL    autodesk.com/simulation-software
+ 
+ 
+ 
+                                          Software (C) Copyright 2016
+                                          Autodesk, Inc.
+                                          All Rights Reserved.
+ 
+                                          Integrated PCGLSS Solver (C) Copyright 1992-2014
+                                          Computational Applications and System Integration, Inc.
+ 
+                                          NASTRAN is a registered trademark of the National Aeronautics
+ 
+ 
+ 
+ 
+ 
+ 
+                                                                        11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE      2
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                          and Space Administration.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                                                        11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE      3
+ 
+ 
+ 
+ 
+                                  M O D E L   I N I T I A L I Z A T I O N   D I R E C T I V E S
+ 
+ 
+ 
+ 
+ [FILE MANAGEMENT DIRECTIVES]
+ 
+ DATABASE         = c:\users\fangd\desktop\new folder\new text document.NDB
+ FILESIGNATURE    = 3363
+ FILEBUFFERSIZE   = 100
+ FILESPEC         = C:\ProgramData\Autodesk\Nastran 2018\Temp\NDB3363.TMP\
+ NFILEBUFFER      = 1
+ PURGE            = ON
+ RSLTFILEPURGE    = ON
+ 
+ [OUTPUT CONTROL DIRECTIVES]
+ 
+ BULKDATAOUT      = OFF
+ BULKDATASORT     = ON
+ DISKSTATUS       = ON
+ ELAPSEDTIME      = OFF
+ FEMAPRSLTVECTID  = ON
+ INCRRSLTOUT      = ON
+ LEFTMARGIN       = 1
+ LINE             = 75
+ MEMORYSTATUS     = ON
+ MODLDATAFORMAT   = 3
+ MODLDATAOUT      = ON
+ MODLINITOUT      = ON
+ MODLSTATUS       = DISPLAY
+ OUTCONTSYMBOL    = OFF
+ OUTDISPGEOMMODE  = 1
+ OUTDISPSETID     = 100
+ OUTGRIDOFFSET    = 100000
+ OUTLOADSETID     = 100
+ OUTPAGEFORMAT    = OFF
+ OUTSPCSETID      = 100
+ OUTSTRNSETID     = 100
+ OUTTEMPSETID     = 100
+ OUTZEROVECT      = OFF
+ PCHFILEDBLEPRCS  = OFF
+ PCHFILETYPE      = NASTRAN
+ RSLTFILECOMP     = AUTO
+ RSLTFILEDBLEPRCS = OFF
+ RSLTFILETYPE     = FEMAP BINARY
+ SECONDS          = ON
+ SYSTEMSTATUS     = OFF
+ TRSLDISPDATA     = OFF
+ TRSLDMIDATA      = OFF
+ TRSLMODLDATA     = OFF
+ TRSLPRESDATA     = OFF
+ TRSLRBSEDATA     = OFF
+ TRSLSPCDATA      = OFF
+ TRSLSTRNDATA     = OFF
+ TRSLTEMPDATA     = OFF
+ XYPLOTCSVOUT     = OFF
+ 
+ [MEMORY MANAGEMENT DIRECTIVES]
+ 
+ MAXRAM           = 0
+ MINRAM           = 0
+ RAM              = 0
+ RESERVEDRAM      = 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                                                        11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE      4
+ 
+ 
+ 
+ 
+                                  M O D E L   I N I T I A L I Z A T I O N   D I R E C T I V E S
+ 
+ 
+ 
+ [PROGRAM CONTROL DIRECTIVES]
+ 
+ DECOMPAUTOSIZE   = 50000
+ DECOMPMETHOD     = AUTO
+ DYNRSLTMETHOD    = AUTO
+ EXTRACTAUTOSIZE  = 10000
+ EXTRACTMETHOD    = AUTO
+ GPWEIGHTMETHOD   = AUTO
+ LICENSEMANAGER   = HANDSHAKE
+ RESTART          = OFF
+ RSPECDISPMETHOD  = NODAL
+ RSPECVECTMETHOD  = ON
+ SHELLEGRID       = OFF
+ SOLIDEGRID       = OFF
+ WAITFORLICENSE   = 3
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE      5
+ 
+ 
+ 
+ 
+                         S U B C A S E   C O N S T R A I N T   A N D   L O A D   S E T   D E F I N I T I O N
+ 
+    SUBCASE                        LABEL                      CONSTRAINT SET IDS               LOAD SET IDS           DAMPING SET ID
+      ID                                                        SPC        MPC        DYNAMIC    STATIC    TIME STEP      MODAL
+        1     GRAVITY LOAD                                       40       NONE         NONE       NONE         70         NONE
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE      6
+ 
+ 
+ 
+ 
+                                    R O D   E L E M E N T   P R O P E R T Y   D E F I N I T I O N
+ 
+   PROPERTY     MATERIAL         AREA           J           NSM
+      ID           ID
+       21           22         4.000E+00    1.270E+00    0.000E+00
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE      7
+ 
+ 
+ 
+ 
+                                      I S O T R O P I C   M A T E R I A L   D E F I N I T I O N
+ 
+   MATERIAL           E            G           NU           RHO         ALPHA        T-REF
+      ID
+       22         3.000E+07    1.128E+07    3.300E-01    1.000E+00    0.000E+00    0.000E+00
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE      8
+ 
+ 
+ 
+ 
+                              S U B C A S E   V E C T O R   O U T P U T   S E T   D E F I N I T I O N
+ 
+    SUBCASE          LOAD         DISPLACEMENT       VELOCITY       ACCELERATION       SPC FORCE        MPC FORCE
+      ID            VECTOR           VECTOR           VECTOR           VECTOR           VECTOR           VECTOR
+        1            NONE              ALL             NONE             NONE             NONE             NONE
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE      9
+ 
+ 
+ 
+ 
+                             S U B C A S E   E L E M E N T   O U T P U T   S E T   D E F I N I T I O N
+ 
+    SUBCASE         ELEMENT          ELEMENT          ELEMENT          ELEMENT
+      ID             FORCE           STRESS           STRAIN        STRAIN ENERGY
+        1            NONE             NONE             NONE             NONE
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     10
+ 
+ 
+ 
+ 
+                                S U B C A S E   G R I D   O U T P U T   S E T   D E F I N I T I O N
+ 
+    SUBCASE        GRID POINT      GRID POINT       GRID POINT    GRID POINT STRESS
+      ID             FORCE           STRESS           STRAIN        DISCONTINUITY
+        1            NONE             NONE             NONE             NONE
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     11
+ 
+ 
+ 
+ 
+                                                     S E T   D E F I N I T I O N
+ 
+     SET               ELEMENT/GRID IDS
+      ID
+      100            1         THRU            5
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     12
+ 
+ 
+ 
+ 
+                    R O D   E L E M E N T   S T R E S S   R E C O V E R Y   P R O P E R T Y   D E F I N I T I O N
+ 
+   PROPERTY           C
+      ID
+       21         0.000E+00
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     13
+ 
+ 
+ 
+ 
+                                         M O D E L   P A R A M E T E R   D E F I N I T I O N
+ 
+ 
+ 
+ 
+ 
+ 
+ MODEL SOLUTION SEQUENCE PARAMETERS
+ 
+ STIFFNESS MATRIX AUTOMATIC SINGLE POINT CONSTRAINT                                = ON
+ STIFFNESS MATRIX DIAGONAL RATIO TOLERANCE FOR AUTOMATIC SINGLE POINT CONSTRAINT   = 1.000000E-08
+ STIFFNESS MATRIX FACTOR DIAGONAL RATIO TOLERANCE FOR MECHANISM DETECTION          = 1.000000E+05
+ FLOATING POINT PRECISION CONSTANT FOR STIFFNESS MATRIX FACTORIZATION              = 1.000000E-15
+ MODEL RESULTS FLOATING POINT ZERO TOLERANCE                                       = 1.000000E-15
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     14
+ 
+ 
+ 
+ 
+                                                M O D E L   D A T A B A S E   S I Z E
+ 
+ 
+ 
+ 
+ MODEL DATABASE SIZE
+ 
+ SUBCASES                     =        1
+ GRID POINTS                  =        7
+ ELEMENTS                     =        5
+ ELEMENT PROPERTIES           =        1
+ MATERIAL PROPERTIES          =        1
+ SINGLE POINT CONSTRAINTS     =        9
+ SETS                         =        2
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     15
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MODEL SIZE    =          42 DEGREES OF FREEDOM
+ MATRIX SIZE   =      100312 WORDS        0.8 MEGABYTES
+ SEMIBANDWIDTH =          11 WORDS
+ 
+ GLOBAL STIFFNESS MATRIX ASSEMBLY STATISTICS
+ 
+ SPARSE MATRIX SIZE =     100312 WORDS        0.8 MEGABYTES
+ MEMORY ALLOCATED   =     150468 WORDS        1.1 MEGABYTES
+ 
+ ASSEMBLY TIME FOR 5 ELEMENTS = 0.0 SECONDS
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     16
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ DIAGONAL MASS MATRIX FORMULATION USED
+ 
+ ASSEMBLY TIME FOR 5 ELEMENTS = 0.0 SECONDS
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     17
+ 
+ 
+ 
+ 
+                                                    P A R T   D E F I N I T I O N
+ 
+   PROPERTY     MATERIAL       PROPERTY           BOUNDING DIMENSIONS                MASS       VOLUME          GRID      ELEMENTS
+      ID           ID            TYPE          D1          D2          D3                                      POINTS
+       21           22            ROD      5.0000E+00  0.0000E+00  0.0000E+00     2.0000E+01  2.0000E+01           6            5
+ 
+ 
+    TOTAL                                  5.0000E+00  0.0000E+00  0.0000E+00     2.0000E+01  2.0000E+01           6            5
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     18
+ 
+ 
+ GRAVITY LOAD                                                        SUBCASE 1
+ 
+                                      G R I D   P O I N T   S I N G U L A R I T Y   T A B L E
+ 
+     GRID               STRONGEST                  DIRECTION OF SINGULARITY                  STIFFNESS
+      ID                COMPONENT            T1/R1          T2/R2          T3/R3               RATIO
+        2                   2             0.000000E+00   1.000000E+00   0.000000E+00        0.000000E+00
+        2                   3             0.000000E+00   0.000000E+00   1.000000E+00        0.000000E+00
+        2                   5             0.000000E+00   1.000000E+00   0.000000E+00        0.000000E+00
+        2                   6             0.000000E+00   0.000000E+00   1.000000E+00        0.000000E+00
+        3                   2             0.000000E+00   1.000000E+00   0.000000E+00        0.000000E+00
+        3                   3             0.000000E+00   0.000000E+00   1.000000E+00        0.000000E+00
+        3                   5             0.000000E+00   1.000000E+00   0.000000E+00        0.000000E+00
+        3                   6             0.000000E+00   0.000000E+00   1.000000E+00        0.000000E+00
+        4                   2             0.000000E+00   1.000000E+00   0.000000E+00        0.000000E+00
+        4                   3             0.000000E+00   0.000000E+00   1.000000E+00        0.000000E+00
+        4                   5             0.000000E+00   1.000000E+00   0.000000E+00        0.000000E+00
+        4                   6             0.000000E+00   0.000000E+00   1.000000E+00        0.000000E+00
+        5                   2             0.000000E+00   1.000000E+00   0.000000E+00        0.000000E+00
+        5                   3             0.000000E+00   0.000000E+00   1.000000E+00        0.000000E+00
+        5                   5             0.000000E+00   1.000000E+00   0.000000E+00        0.000000E+00
+        5                   6             0.000000E+00   0.000000E+00   1.000000E+00        0.000000E+00
+        6                   2             0.000000E+00   1.000000E+00   0.000000E+00        0.000000E+00
+        6                   3             0.000000E+00   0.000000E+00   1.000000E+00        0.000000E+00
+        6                   5             0.000000E+00   1.000000E+00   0.000000E+00        0.000000E+00
+        6                   6             0.000000E+00   0.000000E+00   1.000000E+00        0.000000E+00
+ 
+ 
+ 
+ 
+ MAXIMUM STIFFNESS MATRIX DIAGONAL =  2.8647E+07  AT GRID 5 COMPONENT 4
+ MINIMUM STIFFNESS MATRIX DIAGONAL =  0.0000E+00  AT GRID 6 COMPONENT 6
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     19
+ 
+ 
+ TIME STEP = 1  TIME = 0.000000E+00                                  SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     20
+ 
+ 
+ TIME STEP = 2  TIME = 1.000000E-01                                  SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     21
+ 
+ 
+ TIME STEP = 3  TIME = 2.000000E-01                                  SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     22
+ 
+ 
+ TIME STEP = 4  TIME = 3.000000E-01                                  SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     23
+ 
+ 
+ TIME STEP = 5  TIME = 4.000000E-01                                  SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     24
+ 
+ 
+ TIME STEP = 6  TIME = 5.000000E-01                                  SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     25
+ 
+ 
+ TIME STEP = 7  TIME = 6.000000E-01                                  SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     26
+ 
+ 
+ TIME STEP = 8  TIME = 7.000000E-01                                  SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     27
+ 
+ 
+ TIME STEP = 9  TIME = 8.000000E-01                                  SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     28
+ 
+ 
+ TIME STEP = 10  TIME = 9.000000E-01                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     29
+ 
+ 
+ TIME STEP = 11  TIME = 1.000000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     30
+ 
+ 
+ TIME STEP = 12  TIME = 1.100000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     31
+ 
+ 
+ TIME STEP = 13  TIME = 1.200000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     32
+ 
+ 
+ TIME STEP = 14  TIME = 1.300000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     33
+ 
+ 
+ TIME STEP = 15  TIME = 1.400000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     34
+ 
+ 
+ TIME STEP = 16  TIME = 1.500000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     35
+ 
+ 
+ TIME STEP = 17  TIME = 1.600000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     36
+ 
+ 
+ TIME STEP = 18  TIME = 1.700000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     37
+ 
+ 
+ TIME STEP = 19  TIME = 1.800000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     38
+ 
+ 
+ TIME STEP = 20  TIME = 1.900000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     39
+ 
+ 
+ TIME STEP = 21  TIME = 2.000000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     40
+ 
+ 
+ TIME STEP = 22  TIME = 2.100000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     41
+ 
+ 
+ TIME STEP = 23  TIME = 2.200000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     42
+ 
+ 
+ TIME STEP = 24  TIME = 2.300000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     43
+ 
+ 
+ TIME STEP = 25  TIME = 2.400000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     44
+ 
+ 
+ TIME STEP = 26  TIME = 2.500000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     45
+ 
+ 
+ TIME STEP = 27  TIME = 2.600000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     46
+ 
+ 
+ TIME STEP = 28  TIME = 2.700000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     47
+ 
+ 
+ TIME STEP = 29  TIME = 2.800000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     48
+ 
+ 
+ TIME STEP = 30  TIME = 2.900000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     49
+ 
+ 
+ TIME STEP = 31  TIME = 3.000000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     50
+ 
+ 
+ TIME STEP = 32  TIME = 3.100000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     51
+ 
+ 
+ TIME STEP = 33  TIME = 3.200000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     52
+ 
+ 
+ TIME STEP = 34  TIME = 3.300000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     53
+ 
+ 
+ TIME STEP = 35  TIME = 3.400000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     54
+ 
+ 
+ TIME STEP = 36  TIME = 3.500000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     55
+ 
+ 
+ TIME STEP = 37  TIME = 3.600000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     56
+ 
+ 
+ TIME STEP = 38  TIME = 3.700000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     57
+ 
+ 
+ TIME STEP = 39  TIME = 3.800000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     58
+ 
+ 
+ TIME STEP = 40  TIME = 3.900000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     59
+ 
+ 
+ TIME STEP = 41  TIME = 4.000000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     60
+ 
+ 
+ TIME STEP = 42  TIME = 4.100000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     61
+ 
+ 
+ TIME STEP = 43  TIME = 4.200000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     62
+ 
+ 
+ TIME STEP = 44  TIME = 4.300000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     63
+ 
+ 
+ TIME STEP = 45  TIME = 4.400000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     64
+ 
+ 
+ TIME STEP = 46  TIME = 4.500000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     65
+ 
+ 
+ TIME STEP = 47  TIME = 4.600000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     66
+ 
+ 
+ TIME STEP = 48  TIME = 4.700000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     67
+ 
+ 
+ TIME STEP = 49  TIME = 4.800000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     68
+ 
+ 
+ TIME STEP = 50  TIME = 4.900000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     69
+ 
+ 
+ TIME STEP = 51  TIME = 5.000000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     70
+ 
+ 
+ TIME STEP = 52  TIME = 5.100000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     71
+ 
+ 
+ TIME STEP = 53  TIME = 5.200000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     72
+ 
+ 
+ TIME STEP = 54  TIME = 5.300000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     73
+ 
+ 
+ TIME STEP = 55  TIME = 5.400000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     74
+ 
+ 
+ TIME STEP = 56  TIME = 5.500000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     75
+ 
+ 
+ TIME STEP = 57  TIME = 5.600000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     76
+ 
+ 
+ TIME STEP = 58  TIME = 5.700000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     77
+ 
+ 
+ TIME STEP = 59  TIME = 5.800000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     78
+ 
+ 
+ TIME STEP = 60  TIME = 5.900000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     79
+ 
+ 
+ TIME STEP = 61  TIME = 6.000000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     80
+ 
+ 
+ TIME STEP = 62  TIME = 6.100000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     81
+ 
+ 
+ TIME STEP = 63  TIME = 6.200000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     82
+ 
+ 
+ TIME STEP = 64  TIME = 6.300000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     83
+ 
+ 
+ TIME STEP = 65  TIME = 6.400000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     84
+ 
+ 
+ TIME STEP = 66  TIME = 6.500000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     85
+ 
+ 
+ TIME STEP = 67  TIME = 6.600000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     86
+ 
+ 
+ TIME STEP = 68  TIME = 6.700000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     87
+ 
+ 
+ TIME STEP = 69  TIME = 6.800000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     88
+ 
+ 
+ TIME STEP = 70  TIME = 6.900000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     89
+ 
+ 
+ TIME STEP = 71  TIME = 7.000000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     90
+ 
+ 
+ TIME STEP = 72  TIME = 7.100000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     91
+ 
+ 
+ TIME STEP = 73  TIME = 7.200000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     92
+ 
+ 
+ TIME STEP = 74  TIME = 7.300000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     93
+ 
+ 
+ TIME STEP = 75  TIME = 7.400000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     94
+ 
+ 
+ TIME STEP = 76  TIME = 7.500000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     95
+ 
+ 
+ TIME STEP = 77  TIME = 7.600000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     96
+ 
+ 
+ TIME STEP = 78  TIME = 7.700000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     97
+ 
+ 
+ TIME STEP = 79  TIME = 7.800000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     98
+ 
+ 
+ TIME STEP = 80  TIME = 7.900000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE     99
+ 
+ 
+ TIME STEP = 81  TIME = 8.000000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    100
+ 
+ 
+ TIME STEP = 82  TIME = 8.100000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    101
+ 
+ 
+ TIME STEP = 83  TIME = 8.200000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    102
+ 
+ 
+ TIME STEP = 84  TIME = 8.300000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    103
+ 
+ 
+ TIME STEP = 85  TIME = 8.400000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    104
+ 
+ 
+ TIME STEP = 86  TIME = 8.500000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    105
+ 
+ 
+ TIME STEP = 87  TIME = 8.600000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    106
+ 
+ 
+ TIME STEP = 88  TIME = 8.700000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    107
+ 
+ 
+ TIME STEP = 89  TIME = 8.800000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    108
+ 
+ 
+ TIME STEP = 90  TIME = 8.900000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    109
+ 
+ 
+ TIME STEP = 91  TIME = 9.000000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    110
+ 
+ 
+ TIME STEP = 92  TIME = 9.100000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    111
+ 
+ 
+ TIME STEP = 93  TIME = 9.200000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    112
+ 
+ 
+ TIME STEP = 94  TIME = 9.300000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    113
+ 
+ 
+ TIME STEP = 95  TIME = 9.400000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    114
+ 
+ 
+ TIME STEP = 96  TIME = 9.500000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    115
+ 
+ 
+ TIME STEP = 97  TIME = 9.600000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    116
+ 
+ 
+ TIME STEP = 98  TIME = 9.700000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    117
+ 
+ 
+ TIME STEP = 99  TIME = 9.800000E+00                                 SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    118
+ 
+ 
+ TIME STEP = 100  TIME = 9.900000E+00                                SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    119
+ 
+ 
+ TIME STEP = 101  TIME = 1.000000E+01                                SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    120
+ 
+ 
+ TIME STEP = 102  TIME = 1.010000E+01                                SUBCASE 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MAXIMUM DISPLACEMENT MAGNITUDE =  0.000000E+00  AT GRID 7
+ MAXIMUM ROTATION MAGNITUDE     =  0.000000E+00  AT GRID 7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    121
+ 
+ 
+ GRAVITY LOAD                                                        SUBCASE 1
+ 
+                                            L O A D   V E C T O R   R E S U L T A N T
+ 
+      TIME        TIME              T1            T2            T3            R1            R2            R3
+      STEP
+        2     1.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        3     2.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        4     3.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        5     4.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        6     5.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        7     6.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        8     7.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        9     8.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       10     9.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       11     1.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       12     1.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       13     1.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       14     1.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       15     1.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       16     1.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       17     1.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       18     1.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       19     1.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       20     1.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       21     2.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       22     2.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       23     2.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       24     2.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       25     2.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       26     2.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       27     2.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       28     2.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       29     2.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       30     2.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       31     3.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       32     3.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       33     3.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       34     3.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       35     3.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       36     3.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       37     3.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       38     3.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       39     3.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       40     3.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       41     4.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       42     4.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       43     4.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       44     4.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       45     4.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       46     4.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       47     4.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       48     4.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       49     4.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       50     4.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       51     5.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       52     5.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       53     5.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       54     5.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       55     5.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       56     5.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       57     5.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       58     5.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       59     5.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       60     5.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       61     6.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    122
+ 
+ 
+ GRAVITY LOAD                                                        SUBCASE 1
+ 
+                                            L O A D   V E C T O R   R E S U L T A N T
+ 
+      TIME        TIME              T1            T2            T3            R1            R2            R3
+      STEP
+       62     6.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       63     6.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       64     6.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       65     6.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       66     6.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       67     6.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       68     6.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       69     6.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       70     6.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       71     7.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       72     7.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       73     7.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       74     7.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       75     7.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       76     7.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       77     7.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       78     7.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       79     7.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       80     7.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       81     8.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       82     8.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       83     8.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       84     8.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       85     8.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       86     8.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       87     8.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       88     8.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       89     8.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       90     8.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       91     9.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       92     9.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       93     9.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       94     9.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       95     9.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       96     9.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       97     9.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       98     9.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       99     9.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+      100     9.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+      101     1.000000E+01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+      102     1.010000E+01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    123
+ 
+ 
+ GRAVITY LOAD                                                        SUBCASE 1
+ 
+                           S I N G L E   P O I N T   C O N S T R A I N T   V E C T O R   R E S U L T A N T
+ 
+      TIME        TIME              T1            T2            T3            R1            R2            R3
+      STEP
+        2     1.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        3     2.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        4     3.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        5     4.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        6     5.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        7     6.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        8     7.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        9     8.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       10     9.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       11     1.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       12     1.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       13     1.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       14     1.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       15     1.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       16     1.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       17     1.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       18     1.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       19     1.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       20     1.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       21     2.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       22     2.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       23     2.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       24     2.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       25     2.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       26     2.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       27     2.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       28     2.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       29     2.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       30     2.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       31     3.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       32     3.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       33     3.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       34     3.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       35     3.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       36     3.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       37     3.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       38     3.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       39     3.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       40     3.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       41     4.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       42     4.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       43     4.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       44     4.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       45     4.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       46     4.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       47     4.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       48     4.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       49     4.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       50     4.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       51     5.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       52     5.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       53     5.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       54     5.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       55     5.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       56     5.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       57     5.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       58     5.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       59     5.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       60     5.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       61     6.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    124
+ 
+ 
+ GRAVITY LOAD                                                        SUBCASE 1
+ 
+                           S I N G L E   P O I N T   C O N S T R A I N T   V E C T O R   R E S U L T A N T
+ 
+      TIME        TIME              T1            T2            T3            R1            R2            R3
+      STEP
+       62     6.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       63     6.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       64     6.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       65     6.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       66     6.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       67     6.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       68     6.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       69     6.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       70     6.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       71     7.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       72     7.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       73     7.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       74     7.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       75     7.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       76     7.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       77     7.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       78     7.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       79     7.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       80     7.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       81     8.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       82     8.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       83     8.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       84     8.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       85     8.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       86     8.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       87     8.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       88     8.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       89     8.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       90     8.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       91     9.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       92     9.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       93     9.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       94     9.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       95     9.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       96     9.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       97     9.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       98     9.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       99     9.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+      100     9.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+      101     1.000000E+01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+      102     1.010000E+01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    125
+ 
+ 
+ GRAVITY LOAD                                                        SUBCASE 1
+ 
+                                            M A X I M U M   A P P L I E D   L O A D S
+ 
+      TIME        TIME              T1            T2            T3            R1            R2            R3
+      STEP
+        2     1.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        3     2.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        4     3.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        5     4.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        6     5.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        7     6.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        8     7.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        9     8.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       10     9.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       11     1.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       12     1.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       13     1.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       14     1.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       15     1.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       16     1.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       17     1.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       18     1.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       19     1.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       20     1.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       21     2.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       22     2.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       23     2.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       24     2.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       25     2.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       26     2.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       27     2.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       28     2.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       29     2.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       30     2.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       31     3.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       32     3.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       33     3.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       34     3.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       35     3.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       36     3.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       37     3.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       38     3.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       39     3.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       40     3.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       41     4.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       42     4.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       43     4.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       44     4.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       45     4.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       46     4.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       47     4.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       48     4.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       49     4.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       50     4.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       51     5.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       52     5.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       53     5.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       54     5.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       55     5.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       56     5.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       57     5.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       58     5.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       59     5.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       60     5.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       61     6.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    126
+ 
+ 
+ GRAVITY LOAD                                                        SUBCASE 1
+ 
+                                            M A X I M U M   A P P L I E D   L O A D S
+ 
+      TIME        TIME              T1            T2            T3            R1            R2            R3
+      STEP
+       62     6.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       63     6.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       64     6.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       65     6.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       66     6.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       67     6.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       68     6.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       69     6.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       70     6.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       71     7.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       72     7.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       73     7.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       74     7.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       75     7.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       76     7.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       77     7.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       78     7.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       79     7.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       80     7.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       81     8.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       82     8.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       83     8.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       84     8.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       85     8.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       86     8.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       87     8.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       88     8.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       89     8.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       90     8.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       91     9.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       92     9.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       93     9.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       94     9.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       95     9.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       96     9.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       97     9.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       98     9.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       99     9.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+      100     9.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+      101     1.000000E+01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+      102     1.010000E+01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    127
+ 
+ 
+ GRAVITY LOAD                                                        SUBCASE 1
+ 
+                                            M A X I M U M   D I S P L A C E M E N T S
+ 
+      TIME        TIME              T1            T2            T3            R1            R2            R3
+      STEP
+        2     1.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        3     2.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        4     3.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        5     4.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        6     5.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        7     6.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        8     7.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        9     8.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       10     9.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       11     1.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       12     1.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       13     1.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       14     1.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       15     1.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       16     1.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       17     1.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       18     1.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       19     1.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       20     1.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       21     2.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       22     2.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       23     2.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       24     2.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       25     2.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       26     2.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       27     2.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       28     2.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       29     2.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       30     2.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       31     3.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       32     3.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       33     3.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       34     3.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       35     3.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       36     3.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       37     3.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       38     3.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       39     3.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       40     3.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       41     4.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       42     4.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       43     4.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       44     4.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       45     4.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       46     4.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       47     4.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       48     4.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       49     4.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       50     4.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       51     5.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       52     5.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       53     5.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       54     5.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       55     5.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       56     5.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       57     5.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       58     5.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       59     5.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       60     5.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       61     6.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    128
+ 
+ 
+ GRAVITY LOAD                                                        SUBCASE 1
+ 
+                                            M A X I M U M   D I S P L A C E M E N T S
+ 
+      TIME        TIME              T1            T2            T3            R1            R2            R3
+      STEP
+       62     6.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       63     6.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       64     6.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       65     6.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       66     6.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       67     6.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       68     6.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       69     6.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       70     6.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       71     7.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       72     7.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       73     7.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       74     7.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       75     7.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       76     7.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       77     7.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       78     7.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       79     7.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       80     7.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       81     8.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       82     8.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       83     8.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       84     8.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       85     8.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       86     8.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       87     8.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       88     8.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       89     8.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       90     8.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       91     9.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       92     9.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       93     9.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       94     9.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       95     9.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       96     9.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       97     9.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       98     9.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       99     9.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+      100     9.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+      101     1.000000E+01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+      102     1.010000E+01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    129
+ 
+ 
+ GRAVITY LOAD                                                        SUBCASE 1
+ 
+                                               M A X I M U M   V E L O C I T I E S
+ 
+      TIME        TIME              T1            T2            T3            R1            R2            R3
+      STEP
+        2     1.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        3     2.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        4     3.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        5     4.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        6     5.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        7     6.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        8     7.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        9     8.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       10     9.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       11     1.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       12     1.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       13     1.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       14     1.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       15     1.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       16     1.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       17     1.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       18     1.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       19     1.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       20     1.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       21     2.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       22     2.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       23     2.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       24     2.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       25     2.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       26     2.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       27     2.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       28     2.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       29     2.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       30     2.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       31     3.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       32     3.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       33     3.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       34     3.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       35     3.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       36     3.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       37     3.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       38     3.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       39     3.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       40     3.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       41     4.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       42     4.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       43     4.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       44     4.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       45     4.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       46     4.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       47     4.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       48     4.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       49     4.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       50     4.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       51     5.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       52     5.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       53     5.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       54     5.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       55     5.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       56     5.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       57     5.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       58     5.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       59     5.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       60     5.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       61     6.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    130
+ 
+ 
+ GRAVITY LOAD                                                        SUBCASE 1
+ 
+                                               M A X I M U M   V E L O C I T I E S
+ 
+      TIME        TIME              T1            T2            T3            R1            R2            R3
+      STEP
+       62     6.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       63     6.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       64     6.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       65     6.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       66     6.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       67     6.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       68     6.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       69     6.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       70     6.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       71     7.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       72     7.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       73     7.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       74     7.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       75     7.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       76     7.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       77     7.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       78     7.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       79     7.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       80     7.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       81     8.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       82     8.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       83     8.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       84     8.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       85     8.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       86     8.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       87     8.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       88     8.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       89     8.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       90     8.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       91     9.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       92     9.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       93     9.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       94     9.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       95     9.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       96     9.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       97     9.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       98     9.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       99     9.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+      100     9.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+      101     1.000000E+01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+      102     1.010000E+01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    131
+ 
+ 
+ GRAVITY LOAD                                                        SUBCASE 1
+ 
+                                            M A X I M U M   A C C E L E R A T I O N S
+ 
+      TIME        TIME              T1            T2            T3            R1            R2            R3
+      STEP
+        2     1.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        3     2.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        4     3.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        5     4.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        6     5.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        7     6.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        8     7.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        9     8.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       10     9.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       11     1.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       12     1.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       13     1.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       14     1.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       15     1.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       16     1.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       17     1.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       18     1.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       19     1.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       20     1.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       21     2.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       22     2.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       23     2.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       24     2.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       25     2.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       26     2.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       27     2.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       28     2.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       29     2.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       30     2.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       31     3.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       32     3.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       33     3.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       34     3.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       35     3.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       36     3.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       37     3.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       38     3.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       39     3.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       40     3.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       41     4.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       42     4.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       43     4.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       44     4.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       45     4.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       46     4.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       47     4.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       48     4.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       49     4.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       50     4.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       51     5.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       52     5.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       53     5.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       54     5.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       55     5.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       56     5.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       57     5.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       58     5.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       59     5.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       60     5.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       61     6.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    132
+ 
+ 
+ GRAVITY LOAD                                                        SUBCASE 1
+ 
+                                            M A X I M U M   A C C E L E R A T I O N S
+ 
+      TIME        TIME              T1            T2            T3            R1            R2            R3
+      STEP
+       62     6.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       63     6.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       64     6.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       65     6.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       66     6.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       67     6.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       68     6.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       69     6.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       70     6.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       71     7.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       72     7.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       73     7.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       74     7.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       75     7.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       76     7.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       77     7.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       78     7.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       79     7.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       80     7.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       81     8.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       82     8.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       83     8.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       84     8.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       85     8.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       86     8.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       87     8.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       88     8.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       89     8.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       90     8.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       91     9.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       92     9.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       93     9.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       94     9.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       95     9.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       96     9.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       97     9.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       98     9.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       99     9.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+      100     9.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+      101     1.000000E+01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+      102     1.010000E+01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    133
+ 
+ 
+ GRAVITY LOAD                                                        SUBCASE 1
+ 
+                          M A X I M U M   F O R C E S   O F   S I N G L E   P O I N T   C O N S T R A I N T
+ 
+      TIME        TIME              T1            T2            T3            R1            R2            R3
+      STEP
+        2     1.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        3     2.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        4     3.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        5     4.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        6     5.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        7     6.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        8     7.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+        9     8.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       10     9.000000E-01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       11     1.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       12     1.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       13     1.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       14     1.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       15     1.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       16     1.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       17     1.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       18     1.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       19     1.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       20     1.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       21     2.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       22     2.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       23     2.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       24     2.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       25     2.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       26     2.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       27     2.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       28     2.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       29     2.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       30     2.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       31     3.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       32     3.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       33     3.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       34     3.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       35     3.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       36     3.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       37     3.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       38     3.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       39     3.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       40     3.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       41     4.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       42     4.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       43     4.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       44     4.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       45     4.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       46     4.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       47     4.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       48     4.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       49     4.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       50     4.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       51     5.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       52     5.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       53     5.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       54     5.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       55     5.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       56     5.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       57     5.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       58     5.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       59     5.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       60     5.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       61     6.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    134
+ 
+ 
+ GRAVITY LOAD                                                        SUBCASE 1
+ 
+                          M A X I M U M   F O R C E S   O F   S I N G L E   P O I N T   C O N S T R A I N T
+ 
+      TIME        TIME              T1            T2            T3            R1            R2            R3
+      STEP
+       62     6.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       63     6.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       64     6.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       65     6.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       66     6.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       67     6.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       68     6.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       69     6.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       70     6.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       71     7.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       72     7.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       73     7.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       74     7.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       75     7.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       76     7.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       77     7.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       78     7.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       79     7.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       80     7.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       81     8.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       82     8.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       83     8.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       84     8.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       85     8.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       86     8.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       87     8.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       88     8.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       89     8.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       90     8.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       91     9.000000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       92     9.100000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       93     9.200000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       94     9.300000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       95     9.400000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       96     9.500000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       97     9.600000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       98     9.700000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+       99     9.800000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+      100     9.900000E+00     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+      101     1.000000E+01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+      102     1.010000E+01     0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    135
+ 
+ 
+ 
+ 
+                                   I N T E R N A L   L O A D   V E C T O R   R E S U L T A N T
+ 
+    SUBCASE         T1            T2            T3            R1            R2            R3
+      ID
+        1      0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    136
+ 
+ 
+ 
+ 
+                                      A N A L Y S I S   D I R E C T I V E   D E F I N I T I O N
+ 
+ 
+ 
+ BUFFEREDDECKREAD = ON
+ BULKDATAOUT      = OFF
+ BULKDATASORT     = ON
+ DATABASE         = c:\users\fangd\desktop\new folder\new text document.NDB
+ DECOMPAUTOSIZE   = 50000
+ DECOMPMETHOD     = VSS
+ DISKSTATUS       = ON
+ DYNRSLTMETHOD    = DISP
+ ELAPSEDTIME      = OFF
+ EXTRACTAUTOSIZE  = 10000
+ EXTRACTMETHOD    = SUBSPACE
+ FEMAPRSLTVECTID  = ON
+ FILEBUFFERSIZE1  = 100
+ FILEBUFFERSIZE2  = 100
+ FILEBUFFERSIZE3  = 100
+ FILEBUFFERSIZE4  = 100
+ FILESIGNATURE    = 3363
+ FILESPEC1        = C:\ProgramData\Autodesk\Nastran 2018\Temp\NDB3363.TMP\
+ FILESPEC2        = C:\ProgramData\Autodesk\Nastran 2018\Temp\NDB3363.TMP\
+ FILESPEC3        = C:\ProgramData\Autodesk\Nastran 2018\Temp\NDB3363.TMP\
+ FILESPEC4        = C:\ProgramData\Autodesk\Nastran 2018\Temp\NDB3363.TMP\
+ GPWEIGHTMETHOD   = MATRIX
+ INCRRSLTOUT      = ON
+ INMEMORYIO       = ON
+ LEFTMARGIN       = 1
+ LICENSEMANAGER   = HANDSHAKE
+ LINE             = 75
+ MAXRAM           = 0
+ MEMORYSTATUS     = ON
+ MINRAM           = 0
+ MODLDATAFORMAT   = 3
+ MODLDATAOUT      = ON
+ MODLINITOUT      = ON
+ MODLSTATUS       = DISPLAY
+ NDISKS           = 1
+ NFILEBUFFER1     = 1
+ NFILEBUFFER2     = 1
+ NFILEBUFFER3     = 1
+ NFILEBUFFER4     = 1
+ NPROCESSORS      = 2
+ OPTIMIZESETTINGS = NONE
+ OUTCONTSYMBOL    = OFF
+ OUTDISPGEOMMODE  = 1
+ OUTDISPSETID     = 100
+ OUTLOADSETID     = 100
+ OUTPAGEFORMAT    = OFF
+ OUTGRIDOFFSET    = 100000
+ OUTSPCSETID      = 100
+ OUTSTRNSETID     = 100
+ OUTTEMPSETID     = 100
+ OUTZEROVECT      = OFF
+ PCHFILEDBLEPRCS  = OFF
+ PCHFILETYPE      = NASTRAN
+ PURGE            = ON
+ RAM              = 13072
+ RESERVEDRAM      = 0
+ RESTART          = OFF
+ RSLTFILEDBLEPRCS = OFF
+ RSLTFILEFORMAT   = PLATFORM
+ RSLTFILEPURGE    = ON
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    137
+ 
+ 
+ 
+ 
+                                      A N A L Y S I S   D I R E C T I V E   D E F I N I T I O N
+ 
+ 
+ 
+ RSLTFILETYPE     = FEMAP BINARY
+ RSLTLABEL        = 1
+ RSPECDISPMETHOD  = NODAL
+ RSPECVECTMETHOD  = OFF
+ SECONDS          = ON
+ SYSTEMSTATUS     = OFF
+ TOPTENGINE       = AUTO
+ TRSLDDAMDATA     = OFF
+ TRSLDFGMDATA     = OFF
+ TRSLDISPDATA     = OFF
+ TRSLDMIDATA      = OFF
+ TRSLLOADDATA     = OFF
+ TRSLMODLDATA     = OFF
+ TRSLPRESDATA     = OFF
+ TRSLRBSEDATA     = OFF
+ TRSLSPCDATA      = OFF
+ TRSLSTRNDATA     = OFF
+ TRSLTEMPDATA     = OFF
+ TRSLTOQEDATA     = OFF
+ SHELLEGRID       = OFF
+ SOLIDEGRID       = OFF
+ WAITFORLICENSE   = 3
+ XYPLOTCSVOUT     = OFF
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    138
+ 
+ 
+ 
+ 
+                                      A N A L Y S I S   P A R A M E T E R   D E F I N I T I O N
+ 
+ 
+ 
+ ACBPRESSET       = 0
+ ACBREFPRES       = 0.000000E+00
+ ACBVC            = 0.000000E+00
+ ADAPTLNCONTACT   = AUTO
+ ADAPTTIMESTEP    = OFF
+ ADDNLTOQUADLOAD  = OFF
+ ADDPRESTRESS     = ON
+ ADDPSDAFREQ      = OFF
+ ALIGNEDGENODE    = OFF
+ ALPHA            = 0.000000E+00
+ ALTFAILINDEXFORM = OFF
+ AUTOBPD          = OFF
+ AUTOCORDROTATE   = ON
+ AUTOFIXELEMGEOM  = ON
+ AUTOFIXRIGIDELEM = ON
+ AUTOFIXRIGIDSPC  = OFF
+ AUTOSPC          = ON
+ BARDKMETHOD      = BOTH
+ BAREQVLOAD       = ON
+ BETA             = 0.000000E+00
+ BISECT           = ON
+ BOLTPRELOADTOL   = 0.000000E+00
+ BPDEFDIAG        = 0.000000E+00
+ CB1              = 1.000000E+00
+ CB2              = 1.000000E+00
+ CK1              = 1.000000E+00
+ CK2              = 1.000000E+00
+ CLOSE            = 1.000000E+00
+ CM1              = 1.000000E+00
+ CM2              = 1.000000E+00
+ COMPE1RSF        = DISABLE
+ COMPE2RSF        = DISABLE
+ COMPE3RSF        = DISABLE
+ COMPG12RSF       = DISABLE
+ COMPG23RSF       = DISABLE
+ COMPG31RSF       = DISABLE
+ COMPILSMETHOD    = COMPONENT
+ COMPK1           = AUTO
+ COMPK2           = AUTO
+ COMPRSLTOUT      = OFF
+ CONTACTGEN       = DISABLE
+ CONTACTTOL       = AUTO
+ CONTACTSTAB      = OFF
+ CONVMATRIX       = OFF
+ COUPMASS         = OFF
+ CP1              = 1.000000E+00
+ CP2              = 1.000000E+00
+ CYSYMGEN         = 0
+ CYSYMTOL         = 1.000000E-10
+ DATABASEACCEL    = ON
+ DDAMPHASE        = 0
+ DELTASTRAINEGOUT = OFF
+ DFREQ            = 1.000000E-05
+ DIRSTRESSTYPE    = 0
+ DISPGEOMSFACT    = 1.000000E+00
+ DMILABEL         =
+ DMIPDIAG         = OFF
+ DYNLMDIRECTDIF   = OFF
+ DYNRESPEIGVOUT   = OFF
+ DYNSOLACCEL      = ON
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    139
+ 
+ 
+ 
+ 
+                                      A N A L Y S I S   P A R A M E T E R   D E F I N I T I O N
+ 
+ 
+ 
+ DYNSOLDIRECTINT  = ON
+ DYNSOLRELGRID    = 2
+ EDGENODETOL      = AUTO
+ EIGENFLEXFREQ    = 1.000000E-01
+ EIGENSHIFTSFACT  = 1.000000E+04
+ EIGENSOLACCEL    = ON
+ ELEMGEOMCHECKS   = OFF
+ ELEMGEOMFATAL    = OFF
+ ELEMGEOMOUT      = OFF
+ ELEMRSLTCORD     = MATERIAL
+ ELEMRSLTMAXTYPE  = MAXCORNER
+ EMODES           = 30
+ ENHCBARRSLT      = OFF
+ ENHCCONTACTRSLT  = OFF
+ ENHCQUADRSLT     = OFF
+ EPSILONFLOAT     = 1.000000E-15
+ EQVSTRESSTYPE    = 0
+ FACTDIAG         = 1.000000E-10
+ FACTRATIOTOL     = 1.000000E+05
+ FIXNLTOQUAD      = ON
+ FLOATINZERO      = 1.000000E-15
+ FLOATOUTZERO     = 1.000000E-15
+ FREQRESPRSLTINCR = 10
+ FREQRESPRSLTOUT  = ON
+ G                = 0.000000E+00
+ GPFORCEMETHOD    = NASTRAN
+ GPRSLTAVEMETHOD  = INVARIANT
+ GPSTRESS         = OFF
+ GPWEIGHT         = OFF
+ GRDPNT           = -1
+ GRIDCOLTOL       = 0.000000E+00
+ GRIDTEMPASGN     = OFF
+ GRIDTEMPAVE      = OFF
+ HEXARTOL         = 1.000000E+02
+ HEXENODE         = OFF
+ HEXFACEMAXIATOL  = 1.650000E+02
+ HEXFACEMINIATOL  = 2.500000E+01
+ HEXFACESKEWTOL   = 6.500000E+01
+ HEXFACETAPERTOL  = 7.500000E-01
+ HEXFACEWARPTOL   = 4.500000E+01
+ HEXINODE         = OFF
+ HEXMAXEPADTOL    = 3.000000E+01
+ HEXMINEPLRTOL    = 5.000000E-01
+ HEXREDORD        = ON
+ HFREQ            = 1.000000E+30
+ HPNLMATREDORD    = AUTO
+ HPNLMATSFACT     = AUTO
+ INERTIALRELIEF   = OFF
+ INITSLINEKSFACT  = 1.000000E-02
+ INITSTRAINSFACT  = 1.000000E+00
+ J4ROT            = AUTO
+ KDAMP            = 1
+ K6ROT            = 1.000000E+02
+ KRIGIDELEM       = 1.500000E+09
+ LANCZOSVECT      = OFF
+ LANGLE           = GIMBAL
+ LARC02TSAITOL    = 2.000000E+00
+ LFREQ            = 0.000000E+00
+ LGDISP           = 0
+ LINEARCONTACT    = OFF
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    140
+ 
+ 
+ 
+ 
+                                      A N A L Y S I S   P A R A M E T E R   D E F I N I T I O N
+ 
+ 
+ 
+ LMODES           = 0
+ LNCONTACTITERTOL = 1.000000E-02
+ M6ROT            = 0.000000E+00
+ MAXADJEDGE       = 100
+ MAXBISECTRESTART = OFF
+ MAXEIGENRESTART  = 5
+ MAXELEMGEOMMSG   = 10000
+ MAXIMPACTSTEP    = 0
+ MAXINCREFSTRAINP = AUTO
+ MAXLNCONTACTITER = -1
+ MAXSPARSEITER    = AUTO
+ MAXSRITER        = 100
+ MAXTOPTITER      = 200
+ MECHSTRAIN       = OFF
+ MINSPARSEITER    = 50
+ MODALDATABASE    = DELETE
+ MODEFSPCSTORE    = ON
+ MODEPFACTOR      = ON
+ MODEVAROUT       = OFF
+ NBEAMINTNODE     = 2
+ NCBMODE          = 1
+ NCONTACTGEOMITER = 1
+ NDAMP            = 0.000000E+00
+ NITERCUPDATE     = AUTO
+ NITERKSUPDATE    = 3
+ NITERMUPDATE     = 3
+ NITERPFUPDATE    = 1
+ NITERSUPDATE     = 8
+ NLAYERS          = 1
+ NLCOMPPLYFAIL    = OFF
+ NLINDATABASE     = DELETE
+ NLINDATALOADSF   = AUTO
+ NLINSOLACCEL     = 4
+ NLINSOLTOL       = 2
+ NLKDIAGAFACT     = 0.000000E+00
+ NLKDIAGCOMP      = 123456
+ NLKDIAGMINAFACT  = 0.000000E+00
+ NLKDIAGSET       = 0
+ NLLSSTRAINTYPE   = LOG
+ NLLSSTRESSTYPE   = CAUCHY
+ NLMATSFACT       = AUTO
+ NLMATTABLGEN     = 0.000000E+00
+ NLNPDKRESET      = OFF
+ NLSUBCREINIT     = OFF
+ NLTOL            = 2
+ NLTOQUAD         = ON
+ NLTRUESTRESS     = OFF
+ NOCOMPS          = ON
+ NRBCHECKMODES    = 0
+ NSUBINCRBISECT   = 200
+ NTOPTSTRESSDIV   = 10
+ OPTION           = ABS
+ OUTSETTOL        = 1.000000E-05
+ PARTGEOMOUT      = ON
+ PARTMASSOUT      = OFF
+ PCGLSSDMI        = OFF
+ PENTARTOL        = 1.000000E+02
+ PENTEGRID        = OFF
+ PENTFACEMAXIATOL = 1.650000E+02
+ PENTFACEMINIATOL = 2.500000E+01
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    141
+ 
+ 
+ 
+ 
+                                      A N A L Y S I S   P A R A M E T E R   D E F I N I T I O N
+ 
+ 
+ 
+ PENTFACESKEWTOL  = 6.500000E+01
+ PENTFACETAPERTOL = 7.500000E-01
+ PENTFACEWARPTOL  = 4.500000E+01
+ PENTMAXEPADTOL   = 3.000000E+01
+ PENTMINEPLRTOL   = 5.000000E-01
+ PENTREDORD       = ON
+ PRGPST           = ON
+ PYRARTOL         = 1.000000E+02
+ PYREGRID         = OFF
+ PYRFACEMAXIATOL  = 1.700000E+02
+ PYRFACEMINIATOL  = 5.000000E+00
+ PYRFACESKEWTOL   = 8.000000E+01
+ PYRFACETAPERTOL  = 7.500000E-01
+ PYRFACEWARPTOL   = 4.500000E+01
+ PYRMAXEPADTOL    = 3.000000E+01
+ PYRMINEPLRTOL    = 5.000000E-01
+ PYRREDORD        = ON
+ QUADARTOL        = 1.000000E+02
+ QUADBNDREDORD    = ON
+ QUADELEMTYPE     = SRI
+ QUADEQVLOAD      = OFF
+ QUADINODE        = OFF
+ QUADMAXEPADTOL   = 3.000000E+01
+ QUADMAXIATOL     = 1.650000E+02
+ QUADMEMREDORD    = ON
+ QUADMINEPLRTOL   = 5.000000E-01
+ QUADMINIATOL     = 2.500000E+01
+ QUADRNODE        = OFF
+ QUADSECT         = OFF
+ QUADSKEWTOL      = 6.500000E+01
+ QUADTAPERTOL     = 7.500000E-01
+ QUADWARPLIMIT    = 4.500000E+01
+ QUADWARPTOL      = 4.500000E+01
+ RADMATRIX        = ON
+ RANDRESPINVLEVEL = 1
+ RANDRESPRSLTOUT  = ON
+ RBCHECKLEVEL     = 0
+ RBCHECKMODES     = 0
+ RESEQGRID        = OFF
+ RESEQGRIDMETHOD  = AUTO
+ RESEQSTARTGRID   = 0
+ RESVEC           = OFF
+ RESVPGF          = 1.000000E-06
+ RIGIDBODYMODE    = AUTO
+ RIGIDELEM2ELAS   = OFF
+ RIGIDELEMCORD    = AUTO
+ RIGIDELEMTYPE    = RBE
+ ROTINERTIA       = ON
+ RSPECTRA         = OFF
+ RSLTDATABASE     = DELETE
+ RSLTFILECOMP     = OFF
+ SCRSPEC          = OFF
+ SHEARELEMTYPE    = NASTRAN
+ SHELLTVSMATTYPE  = FLEXIBLE
+ SIGMA            = 0.000000E+00
+ SKINGEN          = DISABLE
+ SLINEEDGENORMTOL = 6.000000E+01
+ SLINEFACENORMTOL = 3.000000E+01
+ SLINEKAVG        = OFF
+ SLINEKSFACT      = 1.000000E+00
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    142
+ 
+ 
+ 
+ 
+                                      A N A L Y S I S   P A R A M E T E R   D E F I N I T I O N
+ 
+ 
+ 
+ SLINEKSFACT2TC   = OFF
+ SLINEMAXACTCORD  = 0
+ SLINEMAXACTDIR   = XYZ
+ SLINEMAXACTDIST  = AUTO
+ SLINEMAXACTRATIO = 0.000000E+00
+ SLINEMAXACTWIDTH = AUTO
+ SLINEMAXDISPTOL  = 1.000000E-04
+ SLINEMAXPENDIST  = AUTO
+ SLINEOFFSETTOL   = AUTO
+ SLINEOPENKSFACT  = 1.000000E-10
+ SLINEPENTOL      = 2.000000E-01
+ SLINEPOSTOL      = 1.000000E-02
+ SLINEPROTOL      = AUTO
+ SLINEPLANEZDIR   = 3
+ SLINESLIDETYPE   = DYNAMIC
+ SLINESTABKSFACT  = 0.000000E+00
+ SLINESTABOPTION  = 0
+ SLINESTRESSLOC   = MASTER
+ SLINEUNLOADTOL   = 1.000000E-10
+ SOLUTIONERROR    = OFF
+ SORTMODEMASS     = ON
+ SPARSEITERMETHOD = DIRECT
+ SPARSEITERMODE   = 0
+ SPARSEITERTOL    = 1.000000E-06
+ SPARSEMETHOD     = SHELL
+ SPCGEN           = OFF
+ STIFFRATIOTOL    = 1.000000E-08
+ STIFFZEROTOL     = 1.000000E-15
+ STRENGTHRATIO    = OFF
+ STRESSERROR      = ON
+ TABS             = 0.000000E+00
+ TETARTOL         = 1.000000E+02
+ TEMPDEPCOMP      = OFF
+ TETEGRID         = OFF
+ TETFACEMAXIATOL  = 1.700000E+02
+ TETFACEMINIATOL  = 1.000000E+01
+ TETFACESKEWTOL   = 8.000000E+01
+ TETINODE         = OFF
+ TETMAXEPADTOL    = 3.000000E+01
+ TETMINEPLRTOL    = 5.000000E-01
+ TETREDORD        = ON
+ TOPTBTHRESHOLD   = 5.000000E-01
+ TOPTDATABASE     = DELETE
+ TOPTDESIGNTOL    = 1.000000E-13
+ TOPTITERTOL      = 5.000000E-03
+ TOPTMAXACTDIST   = -3.000000E+00
+ TRIARTOL         = 1.000000E+02
+ TRIBNDEDORD      = ON
+ TRIELEMTYPE      = DKT
+ TRIEQVLOAD       = OFF
+ TRIMAXEPADTOL    = 3.000000E+01
+ TRIMAXIATOL      = 1.700000E+02
+ TRIMEMREDORD     = ON
+ TRIMINEPLRTOL    = 5.000000E-01
+ TRIMINIATOL      = 1.000000E+01
+ TRIRNODE         = OFF
+ TRISKEWTOL       = 6.500000E+01
+ TSAI2LARC02      = ON
+ TSAI2MCT         = OFF
+ TSAI2MCTBVF      = AUTO
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    143
+ 
+ 
+ 
+ 
+                                      A N A L Y S I S   P A R A M E T E R   D E F I N I T I O N
+ 
+ 
+ 
+ TSAI2MCTFVF      = AUTO
+ UNITS            = ---
+ UNRESEQGRID      = ON
+ VFM2ACB          = OFF
+ VFMADDMETHOD     = ASSEMBLY
+ VFMINTERACTTOL   = 1.000000E-10
+ VFMNORMTOL       = 3.000000E+01
+ USAWETSURFACE    = 0
+ W3               = 0.000000E+00
+ W4               = 0.000000E+00
+ WARNING          = ON
+ WTMASS           = 1.000000E+00
+ WTMASSMETHOD     = NORAN
+ XDAMP            = ON
+ ZERONPDELEMMASS  = OFF
+ ZONADATAOUT      = OFF
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PLANAR CANTILEVER BEAM                                                 11/28/19  13:49  ADS NASTRAN VERSION 12.0.0.121  PAGE    144
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MODEL ANALYSIS TIME SUMMARY
+ 
+ TOTAL CPU TIME = 2.4 SECONDS
+ WALLCLOCK TIME = 7.2 SECONDS
+ 
+ EXECUTION TERMINATED NORMALLY
+ 
+ TOTAL WARNINGS     = 0
+ TOTAL FATAL ERRORS = 0
+ 
+ 
+ 
+ 
+ 
+ 
